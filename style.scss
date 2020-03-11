@@ -1,0 +1,43 @@
+/* ---------------------------------- Design général ---------------------------------------- */
+
+body {
+    background: url(ressources/Fond.jpeg) fixed no-repeat;
+    background-size: cover;
+    margin: 0px;
+}
+
+/* ----------------------------------- Bandeau ---------------------------------------------- */
+#bandeau {
+    background-color: white;
+    height: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#bandeau #logo {
+    background-image: url(Ressources/logo.png);
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 75px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+#navigation ul {
+    list-style: none;
+    margin-left: 300px;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#navigation a {
+    width: 50px;
+    font-family: 'kingthings_calligraphica_2Rg';
+    font-size: 50px;
+    color: black;
+}
