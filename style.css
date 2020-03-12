@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* ---------------------------------- Design général ---------------------------------------- */
+html, body {
+  margin: 0;
+  height: 100%; }
+
 body {
   background: url(ressources/Fond.jpeg) fixed no-repeat;
   background-size: cover;
@@ -13,28 +17,49 @@ body {
   padding-bottom: 25px; }
 
 #bandeau #logo {
-  background-image: url(Ressources/logo.png);
   position: absolute;
   margin-top: -15px;
-  margin-left: 75px;
-  padding-bottom: 30px;
-  padding-right: 20px;
-  background-size: cover;
-  width: 100px;
-  height: 100px; }
+  margin-left: 70px; }
 
 #navigation ul {
   list-style: none;
-  margin-left: 300px;
+  margin-left: 200px;
   margin-top: 20px;
   padding: 10px;
   display: flex;
   justify-content: space-around; }
 
-#navigation a {
-  width: 50px;
+#navigation a, #navigation li {
+  cursor: pointer;
   font-family: 'kingthings_calligraphica_2Rg';
-  font-size: 50px;
-  color: black; }
+  font-size: 40px;
+  color: black;
+  transform: scale(1);
+  transition: transform 200ms; }
+  #navigation a:hover, #navigation li:hover {
+    color: #777445;
+    transform: scale(1.1); }
+
+@media screen and (max-width: 1000px) {
+  #bandeau {
+    background-color: white;
+    width: 200px;
+    height: 100%; }
+
+  #bandeau #logo {
+    margin-top: -10px;
+    margin-left: 40px; }
+
+  #navigation ul {
+    position: relative;
+    list-style: none;
+    margin-left: -5px;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+  #navigation a {
+    font-size: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
