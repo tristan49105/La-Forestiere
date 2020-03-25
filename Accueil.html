@@ -18,13 +18,35 @@
          <ul>
             <!-- <div id="Accueil"><li><a style="text-decoration:none" href="Accueil.php">Accueil</a></li></div> -->
             
-            <div id="Accueil"><li>Accueil</li></div>
-            <div id="Village"><li>Le Village</li></div>
-            <div id="Mairie"><li>Mairie</li></div>
-            <div id="Demarches"><li>Vos démarches</li></div>
-            <div id="Contact"><li>Contact</li></div>
+            <div id="btnAccueil"><li>Accueil</li></div>
+            <div id="btnVillage"><li>Le Village</li></div>
+            <div id="btnMairie"><li>Mairie</li></div>
+            <div id="btnDemarches"><li>Vos démarches</li></div>
+            <div id="btnContact"><li>Contact</li></div>
          </ul>
       </div>
+</div>
+
+<div id="contact">
+
+   <form action="#" method="post">
+      <div>
+         <label for="name">Votre nom :</label>
+         <input type="text" id="name" name="user_name">
+      </div>
+      <div>
+         <label for="mail">Votre e-mail :</label>
+         <input type="email" id="mail" name="user_mail">
+      </div>
+      <div>
+         <label for="msg">Votre message :</label>
+         <textarea id="msg" name="user_message"></textarea>
+      </div>
+      <div class="button">
+         <button type="submit">Envoyer le message</button>
+     </div>
+   </form>
+  
 </div>
 
 <script type="text/javascript" src="navigation.js"></script>
