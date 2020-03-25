@@ -14,6 +14,13 @@ let btnAccueil = document.getElementById("btnAccueil")
     menuDemarches = document.getElementById("demarches")
     menuContact = document.getElementById("contact")
 
+//Arrivée sur le site de La Forestière//
+menuAccueil.style.display = 'block';
+menuVillage.style.display = 'none';
+menuMairie.style.display = 'none';
+menuDemarches.style.display = 'none';
+menuContact.style.display = 'none';
+
 //Fonctions de navigation entre les menus//
 
 //Menu Accueil//
@@ -24,15 +31,17 @@ btnAccueil.addEventListener('click', function() {
     menuMairie.style.display = 'none';
     menuDemarches.style.display = 'none';
     menuContact.style.display = 'none';
+});
 
 //Menu Village//
-btnAccueil.addEventListener('click', function() {
+btnVillage.addEventListener('click', function() {
     
     menuAccueil.style.display = 'none';
     menuVillage.style.display = 'block';
     menuMairie.style.display = 'none';
     menuDemarches.style.display = 'none';
     menuContact.style.display = 'none';
+});
 
 //Menu Mairie//
 btnMairie.addEventListener('click', function() {
@@ -42,6 +51,7 @@ btnMairie.addEventListener('click', function() {
     menuMairie.style.display = 'block';
     menuDemarches.style.display = 'none';
     menuContact.style.display = 'none';
+});
 
 //Menu Demarches//
 btnDemarches.addEventListener('click', function() {
@@ -51,6 +61,7 @@ btnDemarches.addEventListener('click', function() {
     menuMairie.style.display = 'none';
     menuDemarches.style.display = 'block';
     menuContact.style.display = 'none';
+});
 
 //Menu Contact//
 btnContact.addEventListener('click', function() {
@@ -60,5 +71,4 @@ btnContact.addEventListener('click', function() {
     menuMairie.style.display = 'none';
     menuDemarches.style.display = 'none';
     menuContact.style.display = 'block';
-
 });
