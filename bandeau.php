@@ -9,6 +9,7 @@
             <li><a style="text-decoration:none" href="Le village.php">Le Village</a></li>
             <li><a style="text-decoration:none" href="Mairie.php">Mairie</a></li>
             <li><a style="text-decoration:none" href="Vos Démarches.php">Vos Démarches</a></li>
+            <li><a style="text-decoration:none" href="Contact.php">Contact</a></li>
          </ul>
       </div>
 </div>
