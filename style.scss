@@ -1,5 +1,5 @@
 /* ---------------------------------- Design général ---------------------------------------- */
-html, body { 
+html, body, #bloc_page { 
     margin:0;
     height: 100%;
 }
@@ -7,6 +7,16 @@ body {
     background: url(ressources/Fond.jpeg) fixed no-repeat;
     background-size: cover;
     margin: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1000px) {
+  #bloc_page { 
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 /* ----------------------------------- Bandeau ---------------------------------------------- */
@@ -15,12 +25,31 @@ body {
     height: 100px;
     padding-top: 25px;
     padding-bottom: 25px;
+    @media screen and (max-width: 1000px) {
+    height: 100%;
+    background-color: white;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -20px;
+    font-size: 30px;
+    }
 }
 
-#bandeau #logo {
+#logo {
     position: absolute;
     margin-top: -15px;
     margin-left: 70px;
+    @media screen and (max-width: 1000px) {
+      margin-left: 0em;
+      margin-top: -230px;
+    }
+    @media screen and (max-height: 500px) {
+      display: none;
+    }
 }
 
 #navigation ul {
@@ -30,6 +59,15 @@ body {
     padding: 10px;
     display: flex;
     justify-content: space-around;
+    @media screen and (max-width: 1000px) {
+      margin-left: 0em;
+      margin-top: 70px;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (max-height: 600px) {
+      margin-top: 25px;
+    }
 }
 #navigation li {
     cursor: pointer;
@@ -42,34 +80,15 @@ body {
         color: rgb(119, 116, 69);
         transform: scale(1.1);
     }
+    @media screen and (max-width: 1000px) {
+      padding-top: 25px;
+    }
 }
 
 
+/* -----------------------------------Accueil ---------------------------- */
 
-@media screen and (max-width: 1000px)
-{
-    #bandeau {
-        background-color: white;
-        width: 200px;
-        height: 100%;
-    }
-    #bandeau #logo {
-    margin-top: -10px;
-    margin-left: 40px;
-    }
-    #navigation ul, #navigation li {
-        position: relative;
-        list-style: none;
-        padding-top: 50px;
-        margin-left: -5px;
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 30px;
-    }
 
-}
 
 /* ------------------------------------ Contact ----------------------------*/
 
@@ -136,10 +155,10 @@ form {
     margin-left: .5em;
   }
 
-  @media screen and (max-width: 1000px)
-  {
-    form {
-        margin-top: -400px;
-        margin-left: 300px;
+  /* --------------------------------- footer ------------------------- */
+  #footer h3, #footer p {
+    text-align: center;
+    @media screen and (max-width: 1000px) {
+      display: none;
     }
   }

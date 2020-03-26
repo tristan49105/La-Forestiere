@@ -1,25 +1,51 @@
 @charset "UTF-8";
 /* ---------------------------------- Design général ---------------------------------------- */
-html, body {
+html, body, #bloc_page {
   margin: 0;
   height: 100%; }
 
 body {
   background: url(ressources/Fond.jpeg) fixed no-repeat;
   background-size: cover;
-  margin: 0px; }
+  margin: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
 
+@media screen and (max-width: 1000px) {
+  #bloc_page {
+    display: flex;
+    justify-content: space-around; } }
 /* ----------------------------------- Bandeau ---------------------------------------------- */
 #bandeau {
   background-color: white;
   height: 100px;
   padding-top: 25px;
   padding-bottom: 25px; }
+  @media screen and (max-width: 1000px) {
+    #bandeau {
+      height: 100%;
+      background-color: white;
+      width: 200px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: -20px;
+      font-size: 30px; } }
 
-#bandeau #logo {
+#logo {
   position: absolute;
   margin-top: -15px;
   margin-left: 70px; }
+  @media screen and (max-width: 1000px) {
+    #logo {
+      margin-left: 0em;
+      margin-top: -230px; } }
+  @media screen and (max-height: 500px) {
+    #logo {
+      display: none; } }
 
 #navigation ul {
   list-style: none;
@@ -28,6 +54,15 @@ body {
   padding: 10px;
   display: flex;
   justify-content: space-around; }
+  @media screen and (max-width: 1000px) {
+    #navigation ul {
+      margin-left: 0em;
+      margin-top: 70px;
+      flex-direction: column;
+      align-items: center; } }
+  @media screen and (max-height: 600px) {
+    #navigation ul {
+      margin-top: 25px; } }
 
 #navigation li {
   cursor: pointer;
@@ -39,27 +74,11 @@ body {
   #navigation li:hover {
     color: #777445;
     transform: scale(1.1); }
+  @media screen and (max-width: 1000px) {
+    #navigation li {
+      padding-top: 25px; } }
 
-@media screen and (max-width: 1000px) {
-  #bandeau {
-    background-color: white;
-    width: 200px;
-    height: 100%; }
-
-  #bandeau #logo {
-    margin-top: -10px;
-    margin-left: 40px; }
-
-  #navigation ul, #navigation li {
-    position: relative;
-    list-style: none;
-    padding-top: 50px;
-    margin-left: -5px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 30px; } }
+/* -----------------------------------Accueil ---------------------------- */
 /* ------------------------------------ Contact ----------------------------*/
 #contact {
   display: none; }
@@ -113,9 +132,11 @@ button {
      entre les étiquettes et les champs texte */
   margin-left: .5em; }
 
-@media screen and (max-width: 1000px) {
-  form {
-    margin-top: -400px;
-    margin-left: 300px; } }
+/* --------------------------------- footer ------------------------- */
+#footer h3, #footer p {
+  text-align: center; }
+  @media screen and (max-width: 1000px) {
+    #footer h3, #footer p {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */
