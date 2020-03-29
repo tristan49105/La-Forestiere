@@ -1,7 +1,11 @@
-let btnDemarches = document.getElementById("btnDemarches")
+let demarchesOnline = document.getElementById("demarchesOnline")
+    choixDemarches = document.getElementById("choixDemarche")
+    menuActe1 = document.getElementById("menuActe1");
 
-btnDemarches.addEventListener('click', function() {
+menuActe1.style.display = 'none';
     
-alert("work in progress");
-
+choixDemarches.addEventListener('click', function() {
+    
+choixDemarches.style.display = 'none';
+menuActe1.style.display = 'flex';
 });

@@ -86,22 +86,21 @@ body {
 /* -----------------------------------Accueil ---------------------------- */
 
 /* ----------------------------------- Demarches ---------------------------- */
-
 #demarches {
-  background-color: rgba(220, 220, 220, 0.431);
-  border: solid 1 px black;
+  background-color: rgb(255, 255, 255);
+  border: solid 1 px rgb(119, 116, 69);
   border-radius: 15px;
   padding: 10px;
   margin-top: 15px;
 }
-#btnDemarches {
+#demarchesOnline, #Naissance, #Mariage, #Deces {
   cursor: pointer;
 }
-/* ------------------------------------ Contact ----------------------------*/
 
-#contact {
-    display: none;
+#menuActe1 {
+  justify-content: space-around;
 }
+/* ------------------------------------ Contact ----------------------------*/
 
 #contact form {
     /* Uniquement centrer le formulaire sur la page */
@@ -110,8 +109,8 @@ body {
     margin-top: 50px;
     /* Encadré pour voir les limites du formulaire */
     padding: 1em;
-    background-color: rgba(240, 248, 255, 0.424);
-    border: 1px solid #CCC;
+    background-color: rgb(255, 255, 255);
+    border: solid 1 px rgb(119, 116, 69);
     border-radius: 1em;
   }
   
@@ -136,12 +135,12 @@ body {
     box-sizing: border-box;
   
     /* Pour harmoniser le look & feel des bordures des champs texte */
-    border: 1px solid #999;
+    border: solid 1 px rgb(119, 116, 69);
   }
   
   #contact input:focus, #contact textarea:focus {
     /* Pour souligner légèrement les éléments actifs */
-    border-color: #000;
+    border: solid 1 px rgb(119, 116, 69);
   }
   
   #contact textarea {
