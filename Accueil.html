@@ -20,73 +20,91 @@
 
       <div id="navigation">
          <ul>
-            <div id="btnAccueil"><li>Accueil</li></div>
-            <div id="btnVillage"><li>Le Village</li></div>
-            <div id="btnMairie"><li>Mairie</li></div>
-            <div id="btnDemarches"><li>Vos démarches</li></div>
-            <div id="btnContact"><li>Contact</li></div>
+            <div class="btn"><div id="btnAccueil"><li>Accueil</li></div></div>
+            <div class="btn"><div id="btnVillage"><li>Le Village</li></div></div>
+            <div class="btn"><div id="btnMairie"><li>Mairie</li></div></div>
+            <div class="btn"><div id="btnDemarches"><li>Vos démarches</li></div></div>
+            <div class="btn"><div id="btnContact"><li>Contact</li></div></div>
          </ul>
       </div>
+
 </div>
 
 <!-- -------------------------------------------------ACCUEIL----------------------------------------------------- -->
-<div id="accueil">
-   <p>Bienvenue sur le site de La Forestière</p>
-   <img src="ressources/accueil.jpg"></img>
-</div>
+<div class="menu">
 
+   <div id="accueil">
+      <p>Bienvenue sur le site de La Forestière</p>
+      <img src="ressources/accueil.jpg"></img>
+   </div>
+
+</div>
 <!-- --------------------------------LE VILLAGE-------------------------------------- -->
-<div id="village">
-   <p>Quelques infos sur le village</p>
-</div>
+<div class="menu">
 
+   <div id="village">
+      <p>Quelques infos sur le village</p>
+   </div>
+
+</div>
 <!-- --------------------------------LA MAIRIE-------------------------------------- -->
-<div id="mairie">
-   <p>Informations sur la mairie</p>
+<div class="menu">
+
+   <div id="mairie">
+      <p>Informations sur la mairie</p>
+   </div>
+
 </div>
 
 <!-- --------------------------------VOS DEMARCHES-------------------------------------- -->
-<div id="demarches">
+<div class="menu">
 
-   <div id="demarchesOnline">
+   <div id="demarches">
 
-       <div id="choixDemarche"><h2>Quelle démarche souhaitez-vous réaliser ?</h2>
-               <img src="ressources/LogoActe.png" alt="Acte d'état civil" width="50" height="50">
-               <p>Demande d'acte d'état civil</p> 
-       </div>
+      <div id="demarchesOnline">
 
-       <div id="menuActe1">
-               <div id="Naissance"><img src="ressources/logoNaissance.png"><figcaption> Acte de naissance</figcaption></div>
-               <div id="Mariage"><img src="ressources/logoMariage.png"><figcaption>Acte de mariage</figcaption></div>
-               <div id="Deces"><img src="ressources/logoDeces.png"><figcaption>Acte de décès</figcaption></div>
-       </div>
+         <div id="choixDemarche"><h2>Quelle démarche souhaitez-vous réaliser ?</h2>
+                  <img src="ressources/LogoActe.png" alt="Acte d'état civil" width="50" height="50">
+                  <p>Demande d'acte d'état civil</p> 
+         </div>
 
+         <div id="menuActe1">
+                  <div id="Naissance"><img src="ressources/logoNaissance.png"><figcaption> Acte de naissance</figcaption></div>
+                  <div id="Mariage"><img src="ressources/logoMariage.png"><figcaption>Acte de mariage</figcaption></div>
+                  <div id="Deces"><img src="ressources/logoDeces.png"><figcaption>Acte de décès</figcaption></div>
+         </div>
+
+      </div>
+      
    </div>
-   
+
 </div>
 
-<!-- --------------------------------CONTACT-------------------------------------- -->
+   <!-- --------------------------------CONTACT-------------------------------------- -->
+<div class="menu">
 
-<div id="contact">
+   <div id="contact">
 
-   <form action="#" method="post">
-      <div>
-         <label for="name">Votre nom :</label>
-         <input type="text" id="name" name="user_name">
+      <form action="#" method="post">
+         <div>
+            <label for="name">Votre nom :</label>
+            <input type="text" id="name" name="user_name">
+         </div>
+         <div>
+            <label for="mail">Votre e-mail :</label>
+            <input type="email" id="mail" name="user_mail">
+         </div>
+         <div>
+            <label for="msg">Votre message :</label>
+            <textarea id="msg" name="user_message"></textarea>
+         </div>
+         <div class="button">
+            <button type="submit">Envoyer le message</button>
       </div>
-      <div>
-         <label for="mail">Votre e-mail :</label>
-         <input type="email" id="mail" name="user_mail">
-      </div>
-      <div>
-         <label for="msg">Votre message :</label>
-         <textarea id="msg" name="user_message"></textarea>
-      </div>
-      <div class="button">
-         <button type="submit">Envoyer le message</button>
-     </div>
-   </form>
-  
+      </form>
+   
+   </div>
+
 </div>
 
 <!-- -------------------------------Footer--------------------------------------- -->
