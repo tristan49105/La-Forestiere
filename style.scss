@@ -68,25 +68,43 @@ body {
       margin-top: 25px;
     }
 }
-#navigation li {
+.btn {
     cursor: pointer;
     font-family: 'kingthings_calligraphica_2Rg';
     font-size: 40px;
     color: black;
     transform: scale(1);
     transition: transform 200ms;
-      &:hover {
-        color: rgb(119, 116, 69);
-        transform: scale(1.1);
     }
     @media screen and (max-width: 1000px) {
       padding-top: 25px;
     }
+
+.active {
+  color: rgb(119, 116, 69);
+}
+
+.btn:hover {
+  transform: scale(1.1) 
+}
+
+.nonActive {
+  color: black;
+  transform: scale(1);
+}
+
+/* ---------------------------------- CLASSES JS NAVIGATION ----------------------- */
+.closed { 
+  display : none;
+}
+
+.opened {
+  display : block;
 }
 /* -----------------------------------Accueil ---------------------------- */
 
 /* ----------------------------------- Demarches ---------------------------- */
-#demarches {
+#DEMARCHES {
   background-color: rgb(255, 255, 255);
   border: solid 1 px rgb(119, 116, 69);
   border-radius: 15px;
@@ -102,7 +120,7 @@ body {
 }
 /* ------------------------------------ Contact ----------------------------*/
 
-#contact form {
+#CONTACT form {
     /* Uniquement centrer le formulaire sur la page */
     margin: 0 auto;
     width: 400px;
@@ -114,18 +132,18 @@ body {
     border-radius: 1em;
   }
   
-  #contact form div + div {
+  #CONTACT form div + div {
     margin-top: 1em;
   }
   
-  #contact label {
+  #CONTACT label {
     /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
     display: inline-block;
     width: 90px;
     text-align: right;
   }
   
-  #contact input, textarea {
+  #CONTACT input, textarea {
     /* Pour s'assurer que tous les champs texte ont la même police.
        Par défaut, les textarea ont une police monospace */
     font: 1em sans-serif;
@@ -138,12 +156,12 @@ body {
     border: solid 1 px rgb(119, 116, 69);
   }
   
-  #contact input:focus, #contact textarea:focus {
+  #CONTACT input:focus, #contact textarea:focus {
     /* Pour souligner légèrement les éléments actifs */
     border: solid 1 px rgb(119, 116, 69);
   }
   
-  #contact textarea {
+  #CONTACT textarea {
     /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
     vertical-align: top;
   
@@ -151,12 +169,12 @@ body {
     height: 5em;
   }
   
-  #contact .button {
+  #CONTACT .button {
     /* Pour placer le bouton à la même position que les champs texte */
     padding-left: 90px; /* même taille que les étiquettes */
   }
   
-  #contact button {
+  #CONTACT button {
     /* Cette marge supplémentaire représente grosso modo le même espace que celui
        entre les étiquettes et les champs texte */
     margin-left: .5em;
