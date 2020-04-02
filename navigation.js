@@ -1,74 +1,44 @@
-//Création des variables du menu navigation //
+let menu = document.getElementsByClassName("menu"),
+    btn = document.getElementsByClassName("btn"),
+    btnAccueil = document.getElementById("Accueil");
+    menuAccueil = document.getElementById("ACCUEIL");
 
-let btnAccueil = document.getElementById("btnAccueil")
-    btnVillage = document.getElementById("btnVillage")
-    btnMairie = document.getElementById("btnMairie")
-    btnDemarches = document.getElementById("btnDemarches")
-    btnContact = document.getElementById("btnContact")
-
-//Création des variables des sous-menus //
-   
-    menuAccueil = document.getElementById("accueil")
-    menuVillage = document.getElementById("village")
-    menuMairie = document.getElementById("mairie")
-    menuDemarches = document.getElementById("demarches")
-    menuContact = document.getElementById("contact")
-
-//Arrivée sur le site de La Forestière//
-menuAccueil.style.display = 'block';
-menuVillage.style.display = 'none';
-menuMairie.style.display = 'none';
-menuDemarches.style.display = 'none';
-menuContact.style.display = 'none';
-
-//Fonctions de navigation entre les menus//
-
-//Menu Accueil//
-btnAccueil.addEventListener('click', function() {
+    btnAccueil.className += " active";
     
-    menuAccueil.style.display = 'block';
-    menuVillage.style.display = 'none';
-    menuMairie.style.display = 'none';
-    menuDemarches.style.display = 'none';
-    menuContact.style.display = 'none';
-});
+    for (let i = 0 ; i < btn.length ; i++) {
 
-//Menu Village//
-btnVillage.addEventListener('click', function() {
-    
-    menuAccueil.style.display = 'none';
-    menuVillage.style.display = 'block';
-    menuMairie.style.display = 'none';
-    menuDemarches.style.display = 'none';
-    menuContact.style.display = 'none';
-});
+        // On ferme tous les menus
 
-//Menu Mairie//
-btnMairie.addEventListener('click', function() {
-    
-    menuAccueil.style.display = 'none';
-    menuVillage.style.display = 'none';
-    menuMairie.style.display = 'block';
-    menuDemarches.style.display = 'none';
-    menuContact.style.display = 'none';
-});
+        menu[i].className += " closed";
 
-//Menu Demarches//
-btnDemarches.addEventListener('click', function() {
-    
-    menuAccueil.style.display = 'none';
-    menuVillage.style.display = 'none';
-    menuMairie.style.display = 'none';
-    menuDemarches.style.display = 'block';
-    menuContact.style.display = 'none';
-});
+        // Activation du bouton cliqué
 
-//Menu Contact//
-btnContact.addEventListener('click', function() {
-    
-    menuAccueil.style.display = 'none';
-    menuVillage.style.display = 'none';
-    menuMairie.style.display = 'none';
-    menuDemarches.style.display = 'none';
-    menuContact.style.display = 'block';
-});
+        btn[i].addEventListener("click", function() {
+
+        var currentBtn = document.getElementsByClassName("active");
+
+        if (currentBtn.length > 0) {
+            currentBtn[0].className = currentBtn[0].className.replace(" active", "");
+            }
+
+        this.className += " active";
+
+        // Selection du menu cliqué
+
+        let MenuChoisis = this.id;
+        MenuChoisis = String.prototype.toUpperCase.call(MenuChoisis);
+        MenuChoisis = document.getElementById(MenuChoisis);
+        console.log(MenuChoisis);
+
+        // Activation du menu cliqué
+
+        var currentMenu = document.getElementsByClassName("opened");
+
+        if (currentMenu.length > 0) {
+            currentMenu[0].className = currentMenu[0].className.replace(" opened", " closed");
+            }
+        
+            MenuChoisis.classList.remove("closed");
+            MenuChoisis.classList.add("opened");
+                });
+            }
