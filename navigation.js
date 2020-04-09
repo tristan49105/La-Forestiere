@@ -1,3 +1,5 @@
+// ----------------------------------------- Partie Navigation ------------------------- //
+
 let menu = document.getElementsByClassName("menu"),
     btn = document.getElementsByClassName("btn"),
     btnAccueil = document.getElementById("Accueil");
@@ -10,6 +12,8 @@ let menu = document.getElementsByClassName("menu"),
         // On ferme tous les menus
 
         menu[i].className += " closed";
+        menuAccueil.classList.remove("closed");
+        menuAccueil.classList.add("opened");
 
         // Activation du bouton cliqué
 
@@ -42,3 +46,19 @@ let menu = document.getElementsByClassName("menu"),
             MenuChoisis.classList.add("opened");
                 });
             }
+
+/* Partie Jquery */
+
+jQuery(document).ready(function(){
+  console.log("jQuery est prêt !");
+  });
+
+$etatCivil = $('#etatCivil'),
+$menuEtatCivil1 = $('#menuEtatCivil1'); 
+
+$etatCivil.click(function(){
+
+  //$etatCivil.css('filter', 'contrast(100%)')
+  $menuEtatCivil1.css('display', 'flex');
+
+});
