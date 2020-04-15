@@ -1,64 +1,27 @@
-// ----------------------------------------- Partie Navigation ------------------------- //
+$(document).ready(function(){
 
-let menu = document.getElementsByClassName("menu"),
-    btn = document.getElementsByClassName("btn"),
-    btnAccueil = document.getElementById("Accueil");
-    menuAccueil = document.getElementById("ACCUEIL");
+$btn = $('.btn'),
+$currentMenu = '';
+$main = $('#main');
 
-    btnAccueil.className += " active";
-    
-    for (let i = 0 ; i < btn.length ; i++) {
+//Par défaut, l'accueil s'affiche
 
-        // On ferme tous les menus
+if ($currentMenu == '') {
 
-        menu[i].className += " closed";
-        menuAccueil.classList.remove("closed");
-        menuAccueil.classList.add("opened");
+  $currentMenu = 'Accueil';
+  $('#Accueil').addClass('active');
+  $("#main").hide().load("Accueil.html").fadeIn('500');  
 
-        // Activation du bouton cliqué
+}
 
-        btn[i].addEventListener("click", function() {
+// On navigue entre les menus
 
-        var currentBtn = document.getElementsByClassName("active");
+$btn.click(function(){
 
-        if (currentBtn.length > 0) {
-            currentBtn[0].className = currentBtn[0].className.replace(" active", "");
-            }
+  $btn.removeClass('active');
+  $(this).addClass('active');
+  $("#main").hide().load(this.id + ".html").fadeIn('500');
 
-        this.className += " active";
-
-        // Selection du menu cliqué
-
-        let MenuChoisis = this.id;
-        MenuChoisis = String.prototype.toUpperCase.call(MenuChoisis);
-        MenuChoisis = document.getElementById(MenuChoisis);
-        console.log(MenuChoisis);
-
-        // Activation du menu cliqué
-
-        var currentMenu = document.getElementsByClassName("opened");
-
-        if (currentMenu.length > 0) {
-            currentMenu[0].className = currentMenu[0].className.replace(" opened", " closed");
-            }
-        
-            MenuChoisis.classList.remove("closed");
-            MenuChoisis.classList.add("opened");
-                });
-            }
-
-/* Partie Jquery */
-
-jQuery(document).ready(function(){
-  console.log("jQuery est prêt !");
-  });
-
-$etatCivil = $('#etatCivil'),
-$menuEtatCivil1 = $('#menuEtatCivil1'); 
-
-$etatCivil.click(function(){
-
-  //$etatCivil.css('filter', 'contrast(100%)')
-  $menuEtatCivil1.css('display', 'flex');
+});
 
 });
