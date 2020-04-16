@@ -1,3 +1,5 @@
+// ==========> Script Navigation <==========
+
 $(document).ready(function(){
 
 $btn = $('.btn'),
@@ -21,7 +23,19 @@ $btn.click(function(){
   $btn.removeClass('active');
   $(this).addClass('active');
   $("#main").hide().load(this.id + ".html").fadeIn('500');
+  //console.log(this.id + ".html");
 
 });
 
+// ==========> Script Demarches <==========
+/*
+$('.menuDemarches').addClass('closed')
+
+$('#etatCivil').click(function(){
+
+  $('#menuEtatCivil1').addClass('opened');
+  console.log('#menuEtatCivil1');
+
+});
+*/
 });
