@@ -87,21 +87,6 @@ body {
   color: rgb(119, 116, 69);
 }
 
-.nonActive {
-  color: black;
-  transform: scale(1);
-}
-
-/* ---------------------------------- CLASSES JS NAVIGATION ----------------------- */
-.closed { 
-  display : none;
-}
-
-.opened {
-  display : block;
-}
-/* -----------------------------------Accueil ---------------------------- */
-
 /* ----------------------------------- Demarches ---------------------------- */
 #DEMARCHES {
   background-color: rgb(255, 255, 255);
@@ -111,24 +96,104 @@ body {
   margin-top: 15px;
 }
 
-.btnDemarche {
-  margin : 20px;
+.choixDemarche .choixActe {
+  margin : 10px;
   display: inline-block;
   border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: -10px;
 }
 
-.btnDemarche {
-  cursor: pointer;
-}
-/*
-#menuEtatCivil1 {
-  display: none;
-}
-*/
-.menuDemarches {
+.menuDemarches2.opened {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  + h2 {
+    display: inline-block;
+  }
+}
+
+.menuDemarches2, .menuDemarches3 {
+  display: none;
+}
+
+#etatCivil {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background: url(Ressources/LogoActe1.png) 0 0 no-repeat;
+  &:hover {
+    background-position: -50px 0px;
+    }
+  &:hover + h3 {
+        color : rgb(119, 116, 69);
+      }
+}
+
+#etatCivil.active {
+  background-position: -50px 0px;
+  + h3 {
+    color : rgb(119, 116, 69);
+  }
+}
+
+#Naissance {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background: url(Ressources/logoNaissance1.png) 0 0 no-repeat;
+  &:hover {
+    background-position: -100px 0px;
+    }
+  &:hover + h3 {
+        color : rgb(119, 116, 69);
+      }
+}
+
+#Naissance.active {
+  background-position: -100px 0px;
+  + h3 {
+  color : rgb(119, 116, 69);
+  }
+}
+
+#Deces {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background: url(Ressources/logoDeces2.png) 0 0 no-repeat;
+  &:hover {
+    background-position: -100px 0px;
+    }
+  &:hover + h3 {
+        color : rgb(119, 116, 69);
+      }
+}
+
+#Deces.active {
+  background-position: -100px 0px;
+  + h3 {
+  color : rgb(119, 116, 69);
+  }
+}
+
+#Mariage {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background: url(Ressources/logoMariage2.png) 0 0 no-repeat;
+  &:hover {
+    background-position: -100px 0px;
+    }
+  &:hover + h3 {
+        color : rgb(119, 116, 69);
+      }
+}
+
+#Mariage.active {
+  background-position: -100px 0px;
+  + h3 {
+  color : rgb(119, 116, 69);
+  }
 }
 /* ------------------------------------ Contact ----------------------------*/
 
