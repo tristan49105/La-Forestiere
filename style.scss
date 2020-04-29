@@ -4,7 +4,7 @@ html, body, #bloc_page {
     height: 100%;
 }
 body {
-    background: url(ressources/fond.jpg) fixed no-repeat;
+    background: url(ressources/Carte\ ancienne.jpg);
     background-size: cover;
     margin: 0px;
     text-align: center;
@@ -18,6 +18,9 @@ body {
     justify-content: space-around;
   }
 }
+
+$Sitecolor:rgb(119, 116, 69);
+$Police: 'kingthings_calligraphica_2Rg';
 /* ----------------------------------- Bandeau ---------------------------------------------- */
 #bandeau {
     background-color: white;
@@ -70,7 +73,7 @@ body {
 }
 .btn {
     cursor: pointer;
-    font-family: 'kingthings_calligraphica_2Rg';
+    font-family: $Police;
     font-size: 40px;
     color: black;
     transform: scale(1);
@@ -84,19 +87,57 @@ body {
     }
 
 .active {
-  color: rgb(119, 116, 69);
+  color: $Sitecolor;
 }
+
+/* ------------------------- Accueil ------------------------------------- */
+#MenuAccueil {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+#news {
+  height: 300px;
+  width: 800px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  text-align: justify;
+  margin: 50px;
+}
+
+
+#meteo {
+  background-color: rgba(255, 255, 255, 0.733);
+  height:300px;
+  width:300px;
+  border-radius: 15px;
+  margin-right: 20px;
+  padding-top: 15px;
+}
+
+#logoMeteo {
+  height: 100px;
+  width: 100px;
+}
+
+#contenuMeteo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 
 /* ----------------------------------- Demarches ---------------------------- */
 #DEMARCHES {
   background-color: rgb(255, 255, 255);
-  border: solid 1 px rgb(119, 116, 69);
+  border: solid 1 px $Sitecolor;
   border-radius: 15px;
   padding: 10px;
   margin-top: 15px;
 }
 
-.choixDemarche .choixActe {
+.choixActe {
   margin : 10px;
   display: inline-block;
   border-radius: 15px;
@@ -104,19 +145,20 @@ body {
   margin-bottom: -10px;
 }
 
-.menuDemarches2.opened {
+#menuEtatCivil, .menuDemarches {
   display: flex;
+  margin-top: 20px;
   justify-content: space-around;
   + h2 {
     display: inline-block;
   }
 }
 
-.menuDemarches2, .menuDemarches3 {
+#menuEtatCivil.closed, .menuDemarches.closed {
   display: none;
 }
 
-#etatCivil {
+#EtatCivil {
   display: inline-block;
   height: 50px;
   width: 50px;
@@ -125,14 +167,14 @@ body {
     background-position: -50px 0px;
     }
   &:hover + h3 {
-        color : rgb(119, 116, 69);
+        color : $Sitecolor;
       }
 }
 
-#etatCivil.active {
+#EtatCivil.active {
   background-position: -50px 0px;
   + h3 {
-    color : rgb(119, 116, 69);
+    color : $Sitecolor;
   }
 }
 
@@ -145,14 +187,14 @@ body {
     background-position: -100px 0px;
     }
   &:hover + h3 {
-        color : rgb(119, 116, 69);
+        color : $Sitecolor;
       }
 }
 
 #Naissance.active {
   background-position: -100px 0px;
   + h3 {
-  color : rgb(119, 116, 69);
+  color : $Sitecolor;
   }
 }
 
@@ -165,14 +207,14 @@ body {
     background-position: -100px 0px;
     }
   &:hover + h3 {
-        color : rgb(119, 116, 69);
+        color : $Sitecolor;
       }
 }
 
 #Deces.active {
   background-position: -100px 0px;
   + h3 {
-  color : rgb(119, 116, 69);
+  color : $Sitecolor;
   }
 }
 
@@ -185,15 +227,27 @@ body {
     background-position: -100px 0px;
     }
   &:hover + h3 {
-        color : rgb(119, 116, 69);
+        color : $Sitecolor;
       }
 }
 
 #Mariage.active {
   background-position: -100px 0px;
   + h3 {
-  color : rgb(119, 116, 69);
+  color : $Sitecolor;
   }
+}
+
+.btnContinue {
+  height: 50px;
+  width: 200px;
+  background-color: $Sitecolor;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-family: $Police;
+
+
+
 }
 /* ------------------------------------ Contact ----------------------------*/
 
@@ -205,7 +259,7 @@ body {
     /* Encadré pour voir les limites du formulaire */
     padding: 1em;
     background-color: rgb(255, 255, 255);
-    border: solid 1 px rgb(119, 116, 69);
+    border: solid 1 px $Sitecolor;
     border-radius: 1em;
   }
   
@@ -230,12 +284,12 @@ body {
     box-sizing: border-box;
   
     /* Pour harmoniser le look & feel des bordures des champs texte */
-    border: solid 1 px rgb(119, 116, 69);
+    border: solid 1 px $Sitecolor;
   }
   
   #CONTACT input:focus, #contact textarea:focus {
     /* Pour souligner légèrement les éléments actifs */
-    border: solid 1 px rgb(119, 116, 69);
+    border: solid 1 px $Sitecolor;
   }
   
   #CONTACT textarea {

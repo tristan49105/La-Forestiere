@@ -5,7 +5,7 @@ html, body, #bloc_page {
   height: 100%; }
 
 body {
-  background: url(ressources/fond.jpg) fixed no-repeat;
+  background: url(ressources/Carte\ ancienne.jpg);
   background-size: cover;
   margin: 0px;
   text-align: center;
@@ -66,7 +66,7 @@ body {
 
 .btn {
   cursor: pointer;
-  font-family: 'kingthings_calligraphica_2Rg';
+  font-family: "kingthings_calligraphica_2Rg";
   font-size: 40px;
   color: black;
   transform: scale(1);
@@ -79,6 +79,37 @@ body {
 .active {
   color: #777445; }
 
+/* ------------------------- Accueil ------------------------------------- */
+#MenuAccueil {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+#news {
+  height: 300px;
+  width: 800px;
+  background-color: white;
+  border-radius: 15px;
+  text-align: justify;
+  margin: 50px; }
+
+#meteo {
+  background-color: rgba(255, 255, 255, 0.733);
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+  margin-right: 20px;
+  padding-top: 15px; }
+
+#logoMeteo {
+  height: 100px;
+  width: 100px; }
+
+#contenuMeteo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
 /* ----------------------------------- Demarches ---------------------------- */
 #DEMARCHES {
   background-color: white;
@@ -87,35 +118,36 @@ body {
   padding: 10px;
   margin-top: 15px; }
 
-.choixDemarche .choixActe {
+.choixActe {
   margin: 10px;
   display: inline-block;
   border-radius: 15px;
   cursor: pointer;
   margin-bottom: -10px; }
 
-.menuDemarches2.opened {
+#menuEtatCivil, .menuDemarches {
   display: flex;
+  margin-top: 20px;
   justify-content: space-around; }
-  .menuDemarches2.opened + h2 {
+  #menuEtatCivil + h2, .menuDemarches + h2 {
     display: inline-block; }
 
-.menuDemarches2, .menuDemarches3 {
+#menuEtatCivil.closed, .menuDemarches.closed {
   display: none; }
 
-#etatCivil {
+#EtatCivil {
   display: inline-block;
   height: 50px;
   width: 50px;
   background: url(Ressources/LogoActe1.png) 0 0 no-repeat; }
-  #etatCivil:hover {
+  #EtatCivil:hover {
     background-position: -50px 0px; }
-  #etatCivil:hover + h3 {
+  #EtatCivil:hover + h3 {
     color: #777445; }
 
-#etatCivil.active {
+#EtatCivil.active {
   background-position: -50px 0px; }
-  #etatCivil.active + h3 {
+  #EtatCivil.active + h3 {
     color: #777445; }
 
 #Naissance {
@@ -162,6 +194,14 @@ body {
   background-position: -100px 0px; }
   #Mariage.active + h3 {
     color: #777445; }
+
+.btnContinue {
+  height: 50px;
+  width: 200px;
+  background-color: #777445;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-family: "kingthings_calligraphica_2Rg"; }
 
 /* ------------------------------------ Contact ----------------------------*/
 #CONTACT form {
