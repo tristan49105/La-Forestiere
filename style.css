@@ -5,7 +5,7 @@ html, body, #bloc_page {
   height: 100%; }
 
 body {
-  background: url(ressources/fond.jpg) fixed no-repeat;
+  background: url(ressources/Carte\ ancienne.jpg);
   background-size: cover;
   margin: 0px;
   text-align: center;
@@ -66,7 +66,7 @@ body {
 
 .btn {
   cursor: pointer;
-  font-family: 'kingthings_calligraphica_2Rg';
+  font-family: "kingthings_calligraphica_2Rg";
   font-size: 40px;
   color: black;
   transform: scale(1);
@@ -79,18 +79,37 @@ body {
 .active {
   color: #777445; }
 
-.nonActive {
-  color: black;
-  transform: scale(1); }
+/* ------------------------- Accueil ------------------------------------- */
+#MenuAccueil {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
 
-/* ---------------------------------- CLASSES JS NAVIGATION ----------------------- */
-.closed {
-  display: none; }
+#news {
+  height: 300px;
+  width: 800px;
+  background-color: white;
+  border-radius: 15px;
+  text-align: justify;
+  margin: 50px; }
 
-.opened {
-  display: block; }
+#meteo {
+  background-color: rgba(255, 255, 255, 0.733);
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+  margin-right: 20px;
+  padding-top: 15px; }
 
-/* -----------------------------------Accueil ---------------------------- */
+#logoMeteo {
+  height: 100px;
+  width: 100px; }
+
+#contenuMeteo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
 /* ----------------------------------- Demarches ---------------------------- */
 #DEMARCHES {
   background-color: white;
@@ -99,23 +118,90 @@ body {
   padding: 10px;
   margin-top: 15px; }
 
-.btnDemarche {
-  margin: 20px;
+.choixActe {
+  margin: 10px;
   display: inline-block;
-  border-radius: 15px; }
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: -10px; }
 
-.btnDemarche {
-  cursor: pointer; }
-
-/*
-#menuEtatCivil1 {
-  display: none;
-}
-*/
-.menuDemarches {
+#menuEtatCivil, .menuDemarches {
   display: flex;
-  justify-content: space-around;
-  margin-top: 50px; }
+  margin-top: 20px;
+  justify-content: space-around; }
+  #menuEtatCivil + h2, .menuDemarches + h2 {
+    display: inline-block; }
+
+#menuEtatCivil.closed, .menuDemarches.closed {
+  display: none; }
+
+#EtatCivil {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background: url(Ressources/LogoActe1.png) 0 0 no-repeat; }
+  #EtatCivil:hover {
+    background-position: -50px 0px; }
+  #EtatCivil:hover + h3 {
+    color: #777445; }
+
+#EtatCivil.active {
+  background-position: -50px 0px; }
+  #EtatCivil.active + h3 {
+    color: #777445; }
+
+#Naissance {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background: url(Ressources/logoNaissance1.png) 0 0 no-repeat; }
+  #Naissance:hover {
+    background-position: -100px 0px; }
+  #Naissance:hover + h3 {
+    color: #777445; }
+
+#Naissance.active {
+  background-position: -100px 0px; }
+  #Naissance.active + h3 {
+    color: #777445; }
+
+#Deces {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background: url(Ressources/logoDeces2.png) 0 0 no-repeat; }
+  #Deces:hover {
+    background-position: -100px 0px; }
+  #Deces:hover + h3 {
+    color: #777445; }
+
+#Deces.active {
+  background-position: -100px 0px; }
+  #Deces.active + h3 {
+    color: #777445; }
+
+#Mariage {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background: url(Ressources/logoMariage2.png) 0 0 no-repeat; }
+  #Mariage:hover {
+    background-position: -100px 0px; }
+  #Mariage:hover + h3 {
+    color: #777445; }
+
+#Mariage.active {
+  background-position: -100px 0px; }
+  #Mariage.active + h3 {
+    color: #777445; }
+
+.btnContinue {
+  height: 50px;
+  width: 200px;
+  background-color: #777445;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-family: "kingthings_calligraphica_2Rg"; }
 
 /* ------------------------------------ Contact ----------------------------*/
 #CONTACT form {

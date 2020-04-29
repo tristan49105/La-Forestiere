@@ -10,9 +10,10 @@ $main = $('#main');
 
 if ($currentMenu == '') {
 
-  $currentMenu = 'Accueil';
+  $currentMenu = 'Accueil.php';
+  $btn.removeClass('active');
   $('#Accueil').addClass('active');
-  $("#main").hide().load("Accueil.html").fadeIn('500');  
+  $("#main").hide().load($currentMenu).fadeIn('500');  
 
 }
 
@@ -22,20 +23,8 @@ $btn.click(function(){
 
   $btn.removeClass('active');
   $(this).addClass('active');
-  $("#main").hide().load(this.id + ".html").fadeIn('500');
-  //console.log(this.id + ".html");
-
+  $currentMenu = (this.id + ".php");
+  $("#main").hide().load($currentMenu).fadeIn('500');
 });
 
-// ==========> Script Demarches <==========
-/*
-$('.menuDemarches').addClass('closed')
-
-$('#etatCivil').click(function(){
-
-  $('#menuEtatCivil1').addClass('opened');
-  console.log('#menuEtatCivil1');
-
-});
-*/
 });
