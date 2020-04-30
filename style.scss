@@ -1,4 +1,8 @@
 /* ---------------------------------- Design général ---------------------------------------- */
+$Sitecolor:rgb(119, 116, 69);
+//$Police: 'UglyQua', "Acme-Regular", sans-serif;  ;
+$Police: 'UglyQua';
+
 html, body, #bloc_page { 
     margin:0;
     height: 100%;
@@ -6,6 +10,7 @@ html, body, #bloc_page {
 body {
     background: url(ressources/Carte\ ancienne.jpg);
     background-size: cover;
+    background-attachment: local;
     margin: 0px;
     text-align: center;
     display: flex;
@@ -19,8 +24,17 @@ body {
   }
 }
 
-$Sitecolor:rgb(119, 116, 69);
-$Police: 'kingthings_calligraphica_2Rg';
+.btnPerso {
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  height: 40px;
+  width: 170px;
+  border-radius: 1em;
+  background-color: rgba(128, 128, 128, 0.363);
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: $Police;
+}
 /* ----------------------------------- Bandeau ---------------------------------------------- */
 #bandeau {
     background-color: white;
@@ -137,7 +151,7 @@ align-items: center;
   margin-top: 15px;
 }
 
-.choixActe {
+.choixActe, .etatCivil {
   margin : 10px;
   display: inline-block;
   border-radius: 15px;
@@ -237,80 +251,49 @@ align-items: center;
   color : $Sitecolor;
   }
 }
-
-.btnContinue {
-  height: 50px;
-  width: 200px;
-  background-color: $Sitecolor;
-  cursor: pointer;
-  font-size: 2.5rem;
-  font-family: $Police;
-
-
-
-}
 /* ------------------------------------ Contact ----------------------------*/
 
-#CONTACT form {
-    /* Uniquement centrer le formulaire sur la page */
-    margin: 0 auto;
-    width: 400px;
-    margin-top: 50px;
-    /* Encadré pour voir les limites du formulaire */
-    padding: 1em;
-    background-color: rgb(255, 255, 255);
-    border: solid 1 px $Sitecolor;
+#formulaireContact {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 500px;
+    margin: auto;
+    font-family: $Police;
+    font-size: 30px;
+    //text-align: center;
     border-radius: 1em;
   }
-  
-  #CONTACT form div + div {
-    margin-top: 1em;
-  }
-  
-  #CONTACT label {
-    /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
-    display: inline-block;
-    width: 90px;
-    text-align: right;
-  }
-  
-  #CONTACT input, textarea {
-    /* Pour s'assurer que tous les champs texte ont la même police.
-       Par défaut, les textarea ont une police monospace */
-    font: 1em sans-serif;
-  
-    /* Pour que tous les champs texte aient la même dimension */
-    width: 300px;
-    box-sizing: border-box;
-  
-    /* Pour harmoniser le look & feel des bordures des champs texte */
-    border: solid 1 px $Sitecolor;
-  }
-  
-  #CONTACT input:focus, #contact textarea:focus {
-    /* Pour souligner légèrement les éléments actifs */
-    border: solid 1 px $Sitecolor;
-  }
-  
-  #CONTACT textarea {
-    /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
-    vertical-align: top;
-  
-    /* Pour donner assez de place pour écrire du texte */
-    height: 5em;
-  }
-  
-  #CONTACT .button {
-    /* Pour placer le bouton à la même position que les champs texte */
-    padding-left: 90px; /* même taille que les étiquettes */
-  }
-  
-  #CONTACT button {
-    /* Cette marge supplémentaire représente grosso modo le même espace que celui
-       entre les étiquettes et les champs texte */
-    margin-left: .5em;
+
+input, textarea {
+  font-family: $Police;
+  font-size: 25px;
+}
+
+#CoordonneesContact {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
   }
 
+.nomContact input {
+    width: 200px;
+    height: 30px;
+    border-radius: 1em;
+    border: 0px;
+    margin: 20px 0 20px 0;
+  }
+
+#messageContact textarea {
+    width: 450px;
+    height: 150px;
+    border-radius: 1em;
+    border: 0px;
+    margin-top: 20px;
+  }
+
+  #ErrorMailContact.closed, #SuccessMailContact.closed {
+    display: none;
+  }
+    
   /* --------------------------------- footer ------------------------- */
   #footer h3, #footer p {
     text-align: center;

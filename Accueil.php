@@ -44,11 +44,11 @@ let $weather, $temperature, $legende = $('#legende'), request =
 
     request.done(function(data) {
 
-        $temperature = (data.main.temp + " C°");
-        $('#temperature').text($temperature);
+        $temperature = Math.round(data.main.temp);
+        $('#temperature').text($temperature + " C°");
 
         $weather = (data.weather[0].main);
-        console.log($weather);
+        //console.log($weather);
         $('#logoMeteo').css({
             
             background : 'url(Ressources/meteo/' + $weather + '.png) 0 0 no-repeat',
@@ -108,7 +108,7 @@ let $weather, $temperature, $legende = $('#legende'), request =
 
     request.always(function () {
 	   
-       console.log("Requête Ajax terminée");
+       //console.log("Requête Ajax terminée");
 
    });
 

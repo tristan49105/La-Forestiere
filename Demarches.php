@@ -34,7 +34,7 @@
             <option value="enfants">Son fils ou sa fille</option>
         </select>
 
-        <div class="btnContinue">Continuer</div>
+        <div class="btnPerso">Continuer</div>
     
     </div>
 
