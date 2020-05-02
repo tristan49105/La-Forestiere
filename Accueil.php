@@ -1,19 +1,14 @@
 <div id="ACCUEIL" div class="menu">
 
-    <h2>Bienvenue sur le site de La Forestière</h2>
-
     <div id="MenuAccueil">
 
-        <div id="news" class="menu">
-
-            <h3>Les dernières nouvelles de la commune</h3>
-
-            <h1>Information - Covid 19</h1>
-
-            <p>Depuis l’émergence de cette nouvelle maladie, COVID-19, en janvier 2020, tous les agents de Santé publique France sont mobilisés et la complémentarité de leur métier s’exprime pleinement au service de la population.
-Leur action consiste à surveiller et comprendre la dynamique de cette épidémie, anticiper les différents scénarii et mettre en place des actions pour prévenir et limiter la transmission de ce virus sur le territoire national. La réserve sanitaire est fortement mobilisée depuis le début de l’épidémie.
-Les connaissances sur les caractéristiques du COVID-19 et de ce virus évoluant très rapidement jour après jour, la mobilisation est totale en coordination avec les instances françaises (Ministère des Solidarités et de la santé, Agences régionales de santé…) et internationales (Organisation mondiale de la santé, Centre européen de contrôle et de prévention des maladies).</p>
-
+        <div id="carrouselAccueil">
+            <ul>
+                <li><img src="Ressources/carrouselAccueil/1.png" width="400" height="300"></li>
+                <li><img src="Ressources/carrouselAccueil/2.png" width="400" height="300"></li>
+                <li><img src="Ressources/carrouselAccueil/3.png" width="400" height="300"></li>
+                <li><img src="Ressources/carrouselAccueil/4.png" width="400" height="300"></li>
+            </ul>
         </div>
 
 
@@ -21,10 +16,21 @@ Les connaissances sur les caractéristiques du COVID-19 et de ce virus évoluant
 
         <h3> Météo du jour </h3>
 
+        <div id="MeteoLigne1">
+
             <div id=contenuMeteo>
                 <div id="logoMeteo"></div>
                 <h3><div id="InfosMeteo"><div id="legende"></div></br><div id="temperature"></div></h3></div>
             </div>
+
+        </div>
+
+        <div id="MeteoLigne2">
+        
+            <div id="Vent"></div>
+            <div id="Humidity"></div>
+
+        </div>
 
     </div>
 
@@ -32,14 +38,24 @@ Les connaissances sur les caractéristiques du COVID-19 et de ce virus évoluant
 
 <script>
 
+$(function(){
+      setInterval(function(){
+         $("#carrouselAccueil ul").animate({marginLeft:-400},1000,function(){
+            $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+         })
+      }, 3500);
+   });
+
+
 function meteo(){
 
 let $weather, $temperature, $legende = $('#legende'), request =
 
     $.ajax ({
 
-        url : "http://api.openweathermap.org/data/2.5/weather?id=3019549&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric",
+        url : "http://api.openweathermap.org/data/2.5/weather?id=3019549&appid=23109f10e7cc3047a12724ca781c863b&units=metric",
         dataType : "json"
+        //clé openweathermap du tuto = c21a75b667d6f7abb81f118dcf8d4611
     });
 
     request.done(function(data) {
@@ -116,26 +132,4 @@ let $weather, $temperature, $legende = $('#legende'), request =
 
 meteo();
 
-/* ------------- Fonction de type un à étudier
-function meteo() {
-    var url = "https://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric"
- 
-    $.get(url, callBackGetSuccess).done(function() {
-        //alert( "second success" );
-      })
-      .fail(function() {
-        alert( "error" );
-      })
-      .always(function() {
-        //alert( "finished" );
-      });
-}
-
-var callBackGetSuccess = function(data) {
-    //var element = document.getElementById("zone_meteo");
-    element.innerHTML = "La temperature est de " + data.main.temp;
-}
-
-meteo();
-*/
 </script>
