@@ -5,7 +5,7 @@ html, body, #bloc_page {
   height: 100%; }
 
 body {
-  background: url(ressources/Fond.jpeg);
+  background: url(ressources/Fond.jpg);
   background-size: cover;
   background-attachment: fixed;
   margin: 0px;
