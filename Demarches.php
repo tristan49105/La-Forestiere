@@ -1,12 +1,23 @@
 <div id="DEMARCHES" div class="menu">
 
-    <div id="choixDemarche" class="menu">
+<h2>Quelle démarche souhaitez-vous réaliser ?</h2>
 
-       <h2>Quelle démarche souhaitez-vous réaliser ?</h2>
+    <div id="choixDemarche" class="menu">
  
        <div class="etatCivil"><div id="EtatCivil" class="choixDemarche"></div><h3>Demande d'acte d'état civil</h3></div> 
-    
+       <div class="autreDemarche"><div id="autreDemarche" class="choixDemarche"></div><h3>Autres démarches</h3></div> 
+
     </div>
+
+    <div id="menuAutreDemarche" class="closed">
+    
+        <h2>Cliquez sur l’image pour accéder au site Service-Public.fr<h3>
+            <a href="https://www.service-public.fr/" target="_blank">
+                <img src="Ressources/servicePublic.png" alt="Logo Service Public" width="200" height="200">
+            </a>
+
+    </div>
+
 
     <div id="menuEtatCivil" class="closed">
 
@@ -52,14 +63,30 @@
 // Début du formulaire : Selon le bouton cliqué, affiche le menu demandé. 
 // Si le menu est déselectionné, on referme tous les menus suivants dans le formulaire
 
-$('.etatCivil').click(function() {
-    $('#menuEtatCivil').toggleClass("closed");
-    $('#EtatCivil').toggleClass("active");
+
+$('.choixDemarche').click(function() {
+
+    if ($(this)[0].id == "autreDemarche") {
+        $('#menuAutreDemarche').toggleClass("closed");
+        $('#autreDemarche').toggleClass("active");
+
+        $('#menuEtatCivil').addClass("closed");
+        $('#EtatCivil').removeClass("active");
+    }
+
+
+    if ($(this)[0].id == "EtatCivil") {
+        $('#menuEtatCivil').toggleClass("closed");
+        $('#EtatCivil').toggleClass("active");
+
+        $('#menuAutreDemarche').addClass("closed");
+        $('#autreDemarche').removeClass("active");
+    }
+
 
     if (($('#menuEtatCivil').hasClass('closed')) == true) {
-
-        $('.menuDemarches').addClass('closed');  
-
+        $('.menuDemarches').addClass('closed');
+        $('.choixActe').removeClass('active');
     }
 
 });
@@ -69,12 +96,10 @@ $('.etatCivil').click(function() {
 
 $('.choixActe').click(function() {
 
-$choixMenu = $(this);
-$('.choixActe').removeClass('active');
-$(this).addClass('active');
-$('.menuDemarches').addClass('closed');
-//$('#menu'+$choixMenu[0].id).toggleClass('closed');
-$('#menu'+$(this)[0].id).toggleClass('closed');
+    $('.choixActe').removeClass('active');
+    $(this).addClass('active');
+    $('.menuDemarches').addClass('closed');
+    $('#menu'+$(this)[0].id).toggleClass('closed');
 
 });
 

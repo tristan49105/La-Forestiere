@@ -5,9 +5,9 @@ html, body, #bloc_page {
   height: 100%; }
 
 body {
-  background: url(ressources/Carte\ ancienne.jpg);
+  background: url(ressources/Fond.jpeg);
   background-size: cover;
-  background-attachment: local;
+  background-attachment: fixed;
   margin: 0px;
   text-align: center;
   display: flex;
@@ -20,13 +20,18 @@ body {
 .btnPerso {
   margin: 10px 0 20px 0;
   display: inline-block;
-  height: 40px;
-  width: 170px;
+  height: auto;
+  width: auto;
+  padding: 5px;
   border-radius: 1em;
   background-color: rgba(128, 128, 128, 0.363);
   cursor: pointer;
   font-size: 2rem;
   font-family: "UglyQua"; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: black; }
 
 /* ----------------------------------- Bandeau ---------------------------------------------- */
 #bandeau {
@@ -93,25 +98,33 @@ body {
 
 /* ------------------------- Accueil ------------------------------------- */
 #MenuAccueil {
+  margin-top: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center; }
 
-#news {
+#carrouselAccueil {
   height: 300px;
-  width: 800px;
-  background-color: white;
-  border-radius: 15px;
-  text-align: justify;
-  margin: 50px; }
+  width: 400px;
+  border: 3px solid #F2F2F2;
+  overflow: hidden; }
+
+#carrouselAccueil ul {
+  width: 400%;
+  height: 300px;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+#carrouselAccueil li {
+  float: left; }
 
 #meteo {
   background-color: rgba(255, 255, 255, 0.733);
   height: 300px;
   width: 300px;
   border-radius: 15px;
-  margin-right: 20px;
-  padding-top: 15px; }
+  margin-right: 20px; }
 
 #logoMeteo {
   height: 100px;
@@ -122,29 +135,74 @@ body {
   justify-content: space-around;
   align-items: center; }
 
+/* -------------------------------- Le Village ---------------------------- */
+.menuVillage {
+  margin: 50px 50px 200px 50px;
+  display: flex;
+  align-items: center; }
+
+.menu2Village img {
+  border: 4px solid #F2F2F2; }
+
+#Ancre1, #Ancre2, #Ancre3, #toSezanne {
+  margin-top: 20px;
+  transform: scale(1);
+  transition-duration: 300ms; }
+  #Ancre1:hover, #Ancre2:hover, #Ancre3:hover, #toSezanne:hover {
+    transform: scale(1.02); }
+
+#carrouselVillage {
+  height: 350px;
+  width: 500px;
+  border: 3px solid #F2F2F2;
+  overflow: hidden; }
+
+#carrouselVillage ul {
+  width: 400%;
+  height: 350px;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+#carrouselVillage li {
+  float: left; }
+
+#carrouselCP {
+  margin: auto;
+  width: 700px;
+  height: 450px;
+  overflow: hidden;
+  border: 3px solid #F2F2F2; }
+
+#carrouselCP ul {
+  width: 700%;
+  height: 450px;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+#carrouselCP li {
+  float: left; }
+
 /* ----------------------------------- Demarches ---------------------------- */
 #DEMARCHES {
   background-color: white;
-  border: solid 1 px #777445;
-  border-radius: 15px;
-  padding: 10px;
-  margin-top: 15px; }
+  padding: 10px; }
 
-.choixActe, .etatCivil {
+.choixDemarche, .choixActe {
   margin: 10px;
   display: inline-block;
-  border-radius: 15px;
   cursor: pointer;
   margin-bottom: -10px; }
 
-#menuEtatCivil, .menuDemarches {
+#choixDemarche, #menuEtatCivil, .menuDemarches {
   display: flex;
   margin-top: 20px;
   justify-content: space-around; }
-  #menuEtatCivil + h2, .menuDemarches + h2 {
+  #choixDemarche + h2, #menuEtatCivil + h2, .menuDemarches + h2 {
     display: inline-block; }
 
-#menuEtatCivil.closed, .menuDemarches.closed {
+#menuEtatCivil.closed, .menuDemarches.closed, #menuAutreDemarche.closed {
   display: none; }
 
 #EtatCivil {
@@ -160,6 +218,21 @@ body {
 #EtatCivil.active {
   background-position: -50px 0px; }
   #EtatCivil.active + h3 {
+    color: #777445; }
+
+#autreDemarche {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background: url(Ressources/logoActeOther.png) 0 0 no-repeat; }
+  #autreDemarche:hover {
+    background-position: -50px 0px; }
+  #autreDemarche:hover + h3 {
+    color: #777445; }
+
+#autreDemarche.active {
+  background-position: -50px 0px; }
+  #autreDemarche.active + h3 {
     color: #777445; }
 
 #Naissance {
