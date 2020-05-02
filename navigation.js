@@ -10,7 +10,7 @@ $main = $('#main');
 
 if ($currentMenu == '') {
 
-  $currentMenu = 'Accueil.php';
+  $currentMenu = 'php/Accueil.php';
   $btn.removeClass('active');
   $('#Accueil').addClass('active');
   $("#main").hide().load($currentMenu).fadeIn('500');  
@@ -23,7 +23,7 @@ $btn.click(function(){
 
   $btn.removeClass('active');
   $(this).addClass('active');
-  $currentMenu = (this.id + ".php");
+  $currentMenu = ('php/' + this.id + ".php");
   $("#main").hide().load($currentMenu).fadeIn('500');
 });
 
