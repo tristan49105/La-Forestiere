@@ -13,7 +13,7 @@
     
         <h2>Cliquez sur l’image pour accéder au site Service-Public.fr<h3>
             <a href="https://www.service-public.fr/" target="_blank">
-                <img src="ressources/servicePublic.png" alt="Logo Service Public" width="200" height="200">
+                <img src="Ressources/servicePublic.png" alt="Logo Service Public" width="200" height="200">
             </a>
 
     </div>
