@@ -2,7 +2,7 @@
 
     <div id="MenuAccueil">
 
-        <div id="carrouselAccueil">
+        <div id="CarrouselAccueil">
             <ul>
                 <li><img src="Ressources/CarrouselAccueil/1.PNG" width="400" height="300"></li>
                 <li><img src="Ressources/CarrouselAccueil/2.PNG" width="400" height="300"></li>
