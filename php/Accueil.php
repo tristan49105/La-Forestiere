@@ -4,8 +4,8 @@
 
         <div id="carrouselAccueil">
             <ul>
-                <li><img src="Ressources/CarrouselAccueil/1.png" width="400" height="300"></li>
-                <li><img src="Ressources/CarrouselAccueil/2.png" width="400" height="300"></li>
+                <li><img src="Ressources/CarrouselAccueil/1.PNG" width="400" height="300"></li>
+                <li><img src="Ressources/CarrouselAccueil/2.PNG" width="400" height="300"></li>
                 <li><img src="Ressources/CarrouselAccueil/3.png" width="400" height="300"></li>
                 <li><img src="Ressources/CarrouselAccueil/4.png" width="400" height="300"></li>
             </ul>
