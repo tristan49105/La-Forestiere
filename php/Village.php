@@ -21,7 +21,7 @@
                 <li><img src="Ressources/CarrouselAccueil/1.PNG" width="500" height="350"></li>
                 <li><img src="Ressources/CarrouselAccueil/2.PNG" width="500" height="350"></li>
                 <li><img src="Ressources/CarrouselAccueil/3.PNG" width="500" height="350"></li>
-                <li><img src="Ressources/CarrouselAccueil/4.PNG" width="500" height="350"></li>
+                <li><img src="Ressources/CarrouselAccueil/4.png" width="500" height="350"></li>
             </ul>
         </div>
 
