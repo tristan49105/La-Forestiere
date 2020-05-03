@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* ---------------------------------- Design général ---------------------------------------- */
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px; }
+
 html, body, #bloc_page {
   margin: 0;
   height: 100%; }
@@ -7,16 +11,12 @@ html, body, #bloc_page {
 body {
   background: url(Ressources/Fond.jpeg);
   background-size: cover;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
   margin: 0px;
   text-align: center;
   display: flex;
   flex-direction: column; }
 
-@media screen and (max-width: 1000px) {
-  #bloc_page {
-    display: flex;
-    justify-content: space-around; } }
 .btnPerso {
   margin: 10px 0 20px 0;
   display: inline-block;
@@ -24,10 +24,10 @@ body {
   width: auto;
   padding: 5px;
   border-radius: 1em;
-  background-color: rgba(128, 128, 128, 0.363);
+  background-color: #7e8d37;
   cursor: pointer;
   font-size: 2rem;
-  font-family: "UglyQua"; }
+  font-family: "Acme-Regular"; }
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
@@ -36,25 +36,12 @@ a:link, a:visited, a:hover, a:active {
 /* ----------------------------------- Bandeau ---------------------------------------------- */
 #bandeau {
   background-color: white;
-  height: 100px;
+  height: 50px;
   padding-top: 25px;
   padding-bottom: 25px; }
-  @media screen and (max-width: 1000px) {
-    #bandeau {
-      height: 100%;
-      background-color: white;
-      width: 200px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      margin-left: -20px;
-      font-size: 30px; } }
 
 #logo {
   position: absolute;
-  margin-top: -15px;
   margin-left: 70px; }
   @media screen and (max-width: 1000px) {
     #logo {
@@ -67,34 +54,28 @@ a:link, a:visited, a:hover, a:active {
 #navigation ul {
   list-style: none;
   margin-left: 200px;
-  margin-top: 20px;
-  padding: 10px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-around; }
-  @media screen and (max-width: 1000px) {
-    #navigation ul {
-      margin-left: 0em;
-      margin-top: 70px;
-      flex-direction: column;
-      align-items: center; } }
-  @media screen and (max-height: 600px) {
-    #navigation ul {
-      margin-top: 25px; } }
 
 .btn {
   cursor: pointer;
-  font-family: "UglyQua";
-  font-size: 40px;
+  font-family: "Acme-Regular";
+  font-size: 30px;
   color: black;
   transform: scale(1);
   transition: transform 200ms; }
   .btn:hover {
     transform: scale(1.1); }
 
-@media screen and (max-width: 1000px) {
-  padding-top: 25px; }
+#Contact {
+  margin-left: 200px; }
+
 .active {
   color: #777445; }
+
+#main {
+  margin-top: 150px; }
 
 /* ------------------------- Accueil ------------------------------------- */
 #MenuAccueil {
@@ -136,6 +117,25 @@ a:link, a:visited, a:hover, a:active {
   align-items: center; }
 
 /* -------------------------------- Le Village ---------------------------- */
+#village1 {
+  width: 800px;
+  margin: auto;
+  margin-bottom: 300px; }
+
+#village2 {
+  margin: 0 100px 0 100px; }
+
+#village3 {
+  margin-bottom: -30px; }
+
+#village4 {
+  margin-bottom: 0px; }
+
+.legende {
+  font-weight: bold;
+  width: 450px;
+  margin: auto; }
+
 .menuVillage {
   margin: 50px 50px 200px 50px;
   display: flex;
@@ -285,12 +285,12 @@ a:link, a:visited, a:hover, a:active {
   background-color: rgba(255, 255, 255, 0.5);
   width: 500px;
   margin: auto;
-  font-family: "UglyQua";
+  font-family: "Acme-Regular";
   font-size: 30px;
   border-radius: 1em; }
 
 input, textarea {
-  font-family: "UglyQua";
+  font-family: "Acme-Regular";
   font-size: 25px; }
 
 #CoordonneesContact {
