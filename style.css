@@ -209,7 +209,7 @@ a:link, a:visited, a:hover, a:active {
   display: inline-block;
   height: 50px;
   width: 50px;
-  background: url(Ressources/LogoActe1.png) 0 0 no-repeat; }
+  background: url(ressources/LogoActe1.png) 0 0 no-repeat; }
   #EtatCivil:hover {
     background-position: -50px 0px; }
   #EtatCivil:hover + h3 {
@@ -224,7 +224,7 @@ a:link, a:visited, a:hover, a:active {
   display: inline-block;
   height: 50px;
   width: 50px;
-  background: url(Ressources/logoActeOther.png) 0 0 no-repeat; }
+  background: url(ressources/logoActeOther.png) 0 0 no-repeat; }
   #autreDemarche:hover {
     background-position: -50px 0px; }
   #autreDemarche:hover + h3 {
@@ -239,7 +239,7 @@ a:link, a:visited, a:hover, a:active {
   display: inline-block;
   height: 100px;
   width: 100px;
-  background: url(Ressources/logoNaissance1.png) 0 0 no-repeat; }
+  background: url(ressources/logoNaissance1.png) 0 0 no-repeat; }
   #Naissance:hover {
     background-position: -100px 0px; }
   #Naissance:hover + h3 {
@@ -254,7 +254,7 @@ a:link, a:visited, a:hover, a:active {
   display: inline-block;
   height: 100px;
   width: 100px;
-  background: url(Ressources/logoDeces2.png) 0 0 no-repeat; }
+  background: url(ressources/logoDeces2.png) 0 0 no-repeat; }
   #Deces:hover {
     background-position: -100px 0px; }
   #Deces:hover + h3 {
@@ -269,7 +269,7 @@ a:link, a:visited, a:hover, a:active {
   display: inline-block;
   height: 100px;
   width: 100px;
-  background: url(Ressources/logoMariage2.png) 0 0 no-repeat; }
+  background: url(ressources/logoMariage2.png) 0 0 no-repeat; }
   #Mariage:hover {
     background-position: -100px 0px; }
   #Mariage:hover + h3 {

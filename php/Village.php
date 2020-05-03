@@ -9,7 +9,7 @@
 <div id="Ancre1" class="btnPerso">Découvrez notre village</div>
 </div>
 
-<div class="menu2Village"><img src="Ressources/vignoble.jpg" width="500" height="350"></div>
+<div class="menu2Village"><img src="ressources/vignoble.jpg" width="500" height="350"></div>
 
 </div>
 
@@ -18,10 +18,10 @@
 
     <div id="carrouselVillage">
             <ul>
-                <li><img src="Ressources/carrouselAccueil/1.png" width="500" height="350"></li>
-                <li><img src="Ressources/carrouselAccueil/2.png" width="500" height="350"></li>
-                <li><img src="Ressources/carrouselAccueil/3.png" width="500" height="350"></li>
-                <li><img src="Ressources/carrouselAccueil/4.png" width="500" height="350"></li>
+                <li><img src="ressources/carrouselAccueil/1.png" width="500" height="350"></li>
+                <li><img src="ressources/carrouselAccueil/2.png" width="500" height="350"></li>
+                <li><img src="ressources/carrouselAccueil/3.png" width="500" height="350"></li>
+                <li><img src="ressources/carrouselAccueil/4.png" width="500" height="350"></li>
             </ul>
         </div>
 
@@ -46,7 +46,7 @@
 
    </div>
 
-   <div class="menu2Village"><img src="Ressources/Nesle.jpg" width="500" height="350"></div>
+   <div class="menu2Village"><img src="ressources/Nesle.jpg" width="500" height="350"></div>
 
 </div>
 

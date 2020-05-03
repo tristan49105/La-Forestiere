@@ -4,10 +4,10 @@
 
         <div id="carrouselAccueil">
             <ul>
-                <li><img src="Ressources/carrouselAccueil/1.png" width="400" height="300"></li>
-                <li><img src="Ressources/carrouselAccueil/2.png" width="400" height="300"></li>
-                <li><img src="Ressources/carrouselAccueil/3.png" width="400" height="300"></li>
-                <li><img src="Ressources/carrouselAccueil/4.png" width="400" height="300"></li>
+                <li><img src="ressources/carrouselAccueil/1.png" width="400" height="300"></li>
+                <li><img src="ressources/carrouselAccueil/2.png" width="400" height="300"></li>
+                <li><img src="ressources/carrouselAccueil/3.png" width="400" height="300"></li>
+                <li><img src="ressources/carrouselAccueil/4.png" width="400" height="300"></li>
             </ul>
         </div>
 
@@ -67,7 +67,7 @@ let $weather, $temperature, $legende = $('#legende'), request =
         //console.log($weather);
         $('#logoMeteo').css({
             
-            background : 'url(Ressources/meteo/' + $weather + '.png) 0 0 no-repeat',
+            background : 'url(ressources/meteo/' + $weather + '.png) 0 0 no-repeat',
             "background-size" : "cover"
 
         });
@@ -113,7 +113,7 @@ let $weather, $temperature, $legende = $('#legende'), request =
 
         $('#logoMeteo').css({
             
-            background : 'url(Ressources/meteo/error.png) 0 0 no-repeat',
+            background : 'url(ressources/meteo/error.png) 0 0 no-repeat',
             "background-size" : "cover"
 
         });

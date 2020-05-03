@@ -13,7 +13,7 @@
 
 <div id="bandeau">
 
-   <div id="logo"><img src="Ressources/logo.png" alt="Logo La Forestière" title="Logo La Forestière" width=125px
+   <div id="logo"><img src="ressources/logo.png" alt="Logo La Forestière" title="Logo La Forestière" width=125px
     height=125px/></div>
 
       <div id="navigation">
