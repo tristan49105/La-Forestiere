@@ -4,10 +4,10 @@
 
         <div id="carrouselAccueil">
             <ul>
-                <li><img src="Ressources/carrouselAccueil/1.png" width="400" height="300"></li>
-                <li><img src="Ressources/carrouselAccueil/2.png" width="400" height="300"></li>
-                <li><img src="Ressources/carrouselAccueil/3.png" width="400" height="300"></li>
-                <li><img src="Ressources/carrouselAccueil/4.png" width="400" height="300"></li>
+                <li><img src="Ressources/CarrouselAccueil/1.png" width="400" height="300"></li>
+                <li><img src="Ressources/CarrouselAccueil/2.png" width="400" height="300"></li>
+                <li><img src="Ressources/CarrouselAccueil/3.png" width="400" height="300"></li>
+                <li><img src="Ressources/CarrouselAccueil/4.png" width="400" height="300"></li>
             </ul>
         </div>
 
@@ -40,7 +40,7 @@
 
 $(function(){
       setInterval(function(){
-         $("#carrouselAccueil ul").animate({marginLeft:-400},1000,function(){
+         $("#CarrouselAccueil ul").animate({marginLeft:-400},1000,function(){
             $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
          })
       }, 3500);

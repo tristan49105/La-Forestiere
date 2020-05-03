@@ -18,10 +18,10 @@
 
     <div id="carrouselVillage">
             <ul>
-                <li><img src="Ressources/carrouselAccueil/1.png" width="500" height="350"></li>
-                <li><img src="Ressources/carrouselAccueil/2.png" width="500" height="350"></li>
-                <li><img src="Ressources/carrouselAccueil/3.png" width="500" height="350"></li>
-                <li><img src="Ressources/carrouselAccueil/4.png" width="500" height="350"></li>
+                <li><img src="Ressources/CarrouselAccueil/1.png" width="500" height="350"></li>
+                <li><img src="Ressources/CarrouselAccueil/2.png" width="500" height="350"></li>
+                <li><img src="Ressources/CarrouselAccueil/3.png" width="500" height="350"></li>
+                <li><img src="Ressources/CarrouselAccueil/4.png" width="500" height="350"></li>
             </ul>
         </div>
 
