@@ -37,6 +37,8 @@
 
 <script>
 
+function contact () {
+
 $("#formulaireContact").submit(function(event){
     event.preventDefault();
     fonctionContact();
@@ -50,7 +52,7 @@ function fonctionContact (){
 
    $.ajax({
       type: "POST",
-      url: "mailContact.php",
+      url: "php/mailContact.php",
       data: "name=" + name + "&email=" + email + "&message=" + message,
 
       success : function(text){
@@ -66,5 +68,9 @@ function fonctionContact (){
 
    });
 };
+
+};
+
+contact();
 
 </script>

@@ -38,15 +38,6 @@
 
 <script>
 
-$(function(){
-      setInterval(function(){
-         $("#carrouselAccueil ul").animate({marginLeft:-400},1000,function(){
-            $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
-         })
-      }, 3500);
-   });
-
-
 function meteo(){
 
 let $weather, $temperature, $legende = $('#legende'), request =
