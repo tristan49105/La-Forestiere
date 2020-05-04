@@ -24,7 +24,7 @@
             <textarea id="msg" name="msg" placeholder="Votre message" required></textarea>
          </div>
          
-         <button type="submit" id="submit" class="btnPerso">Envoyer</button>
+         <button type="submit" id="submit" class="btnPerso4">Envoyer</button>
          
          <div id="ErrorMailContact" class=closed><h3 color red>Une erreur est survenue. Merci de réessayer</h3></div>
          <div id="SuccessMailContact" class=closed><h3 color red>Message envoyé avec succès !</h3></div>

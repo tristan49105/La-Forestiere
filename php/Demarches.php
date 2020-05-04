@@ -4,8 +4,8 @@
 
     <div id="choixDemarche" class="menu">
  
-       <div class="etatCivil"><div id="EtatCivil" class="choixDemarche"></div><h3>Demande d'acte d'état civil</h3></div> 
-       <div class="autreDemarche"><div id="autreDemarche" class="choixDemarche"></div><h3>Autres démarches</h3></div> 
+       <div id="etatcivil" class="btnPerso3"><img src="Ressources/LogoActeNone3.png" width="25" height="25"><p>Faire une demande d'état civil</p></div> 
+       <div id="autreDem" class="btnPerso3"><img src="Ressources/logoActeOther3.png" width="25" height="25"><p>Faire une demande d'état civil</p></div> 
 
     </div>
 

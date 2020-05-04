@@ -12,29 +12,45 @@
         </div>
 
 
-        <div id="meteo" class="menu">
+        <div id=AccueilPart2>
 
-        <h3> Météo du jour </h3>
+            <div id="meteo" class="menu">
 
-        <div id="MeteoLigne1">
+                <h3> Météo du jour </h3>
 
-            <div id=contenuMeteo>
-                <div id="logoMeteo"></div>
-                <h3><div id="InfosMeteo"><div id="legende"></div></br><div id="temperature"></div></h3></div>
+                <div id="MeteoLigne1">
+
+                    <div id=contenuMeteo>
+                        <div id="logoMeteo"></div>
+                        <h3><div id="InfosMeteo"><div id="legende"></div></br><div id="temperature"></div></h3></div>
+                    </div>
+
+                </div>
+
+                <div id="MeteoLigne2">
+                
+                    <div id="Vent"></div>
+                    <div id="Humidity"></div>
+
+                </div>
+
             </div>
 
-        </div>
 
-        <div id="MeteoLigne2">
-        
-            <div id="Vent"></div>
-            <div id="Humidity"></div>
+            <div id=calendrier>
+
+                <h3>Dates à retenir</h3>
+                <p>8 Mai : Fête de la victoire
+                <p>11 Mai : Fin du confinement</p>
+                <p>1er Juin : Fête de la Pentecôte</p>
+            </div>
 
         </div>
 
     </div>
 
 </div>
+
 
 <script>
 

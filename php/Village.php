@@ -3,8 +3,8 @@
 <div id="village1" width="800">
 
 <h1>La Commune de La Forestière, située à la frontière entre Brie et Champagne, est heureuse de vous accueillir.</h1>
-<h3>Venez profitez des richesses de notre terroir dans un cadre reposant, dominé par la majestueuse forêt domaniale de la Traconne.</h3>
-<div id="Ancre1" class="btnPerso">Découvrez notre village</div>
+<p>Venez profitez des richesses de notre terroir dans un cadre reposant, dominé par la majestueuse forêt domaniale de la Traconne.</p>
+<div id="Ancre1" class="btnPerso2">Découvrez notre village</div>
 
 </div>
 

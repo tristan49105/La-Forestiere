@@ -1,8 +1,16 @@
 @charset "UTF-8";
 /* ---------------------------------- Design général ---------------------------------------- */
+h1 {
+  font-family: "Acme-Regular";
+  font-size: 36px; }
+
 p {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px; }
+
+#village1 p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px; }
 
 html, body, #bloc_page {
   margin: 0;
@@ -24,10 +32,56 @@ body {
   width: auto;
   padding: 5px;
   border-radius: 1em;
-  background-color: #7e8d37;
+  background-color: #777445;
   cursor: pointer;
   font-size: 2rem;
   font-family: "Acme-Regular"; }
+
+.btnPerso2 {
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  padding: 5px;
+  border-radius: 1em;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: "Acme-Regular"; }
+
+.btnPerso3 {
+  height: 1.5rem;
+  padding: 10px;
+  width: auto;
+  border-radius: 2em;
+  background-color: #1e7a21;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  margin: 0 20px 0 20px;
+  transform: scale(1);
+  transition: transform 200ms; }
+  .btnPerso3:hover {
+    transform: scale(1.02); }
+
+.btnPerso3 p {
+  font-family: "Acme-Regular";
+  margin-top: 2px; }
+
+.btnPerso4 {
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: "Acme-Regular";
+  transition: transform 200ms; }
+  .btnPerso4:hover {
+    transform: border 2px; }
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
@@ -72,17 +126,18 @@ a:link, a:visited, a:hover, a:active {
   margin-left: 200px; }
 
 .active {
-  color: #777445; }
-
-#main {
-  margin-top: 150px; }
+  color: #1e7a21;
+  border-bottom: 3px solid #1e7a21; }
 
 /* ------------------------- Accueil ------------------------------------- */
 #MenuAccueil {
-  margin-top: 50px;
+  margin-top: 130px;
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
+  justify-content: space-around; }
+
+#AccueilPart2 {
+  display: flex;
+  flex-direction: column; }
 
 #carrouselAccueil {
   height: 300px;
@@ -102,10 +157,8 @@ a:link, a:visited, a:hover, a:active {
 
 #meteo {
   background-color: rgba(255, 255, 255, 0.733);
-  height: 300px;
-  width: 300px;
-  border-radius: 15px;
-  margin-right: 20px; }
+  height: 200px;
+  width: 300px; }
 
 #logoMeteo {
   height: 100px;
@@ -116,7 +169,15 @@ a:link, a:visited, a:hover, a:active {
   justify-content: space-around;
   align-items: center; }
 
+#calendrier {
+  background-color: rgba(255, 255, 255, 0.733);
+  height: 200px;
+  width: 300px; }
+
 /* -------------------------------- Le Village ---------------------------- */
+#VILLAGE {
+  margin-top: 150px; }
+
 #village1 {
   width: 800px;
   margin: auto;
@@ -187,7 +248,11 @@ a:link, a:visited, a:hover, a:active {
 /* ----------------------------------- Demarches ---------------------------- */
 #DEMARCHES {
   background-color: white;
+  margin-top: 0px;
   padding: 10px; }
+
+#etatcivil, #autreDem {
+  display: flex; }
 
 .choixDemarche, .choixActe {
   margin: 10px;
@@ -195,11 +260,15 @@ a:link, a:visited, a:hover, a:active {
   cursor: pointer;
   margin-bottom: -10px; }
 
-#choixDemarche, #menuEtatCivil, .menuDemarches {
+#choixDemarche {
+  display: flex;
+  justify-content: center; }
+
+#menuEtatCivil, .menuDemarches {
   display: flex;
   margin-top: 20px;
   justify-content: space-around; }
-  #choixDemarche + h2, #menuEtatCivil + h2, .menuDemarches + h2 {
+  #menuEtatCivil + h2, .menuDemarches + h2 {
     display: inline-block; }
 
 #menuEtatCivil.closed, .menuDemarches.closed, #menuAutreDemarche.closed {
@@ -281,13 +350,16 @@ a:link, a:visited, a:hover, a:active {
     color: #777445; }
 
 /* ------------------------------------ Contact ----------------------------*/
+#CONTACT {
+  margin-top: 75px; }
+
 #formulaireContact {
+  padding: 20px;
   background-color: rgba(255, 255, 255, 0.5);
   width: 500px;
   margin: auto;
   font-family: "Acme-Regular";
-  font-size: 30px;
-  border-radius: 1em; }
+  font-size: 30px; }
 
 input, textarea {
   font-family: "Acme-Regular";
@@ -299,16 +371,14 @@ input, textarea {
   text-align: center; }
 
 .nomContact input {
-  width: 200px;
+  width: 180px;
   height: 30px;
-  border-radius: 1em;
   border: 0px;
   margin: 20px 0 20px 0; }
 
 #messageContact textarea {
-  width: 450px;
+  width: 495px;
   height: 150px;
-  border-radius: 1em;
   border: 0px;
   margin-top: 20px; }
 

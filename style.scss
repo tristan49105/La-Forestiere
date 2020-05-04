@@ -1,17 +1,29 @@
 /* ---------------------------------- Design général ---------------------------------------- */
 $Sitecolor:rgb(119, 116, 69);
+$Sitecolor2 : #1e7a21;
 //$Police: 'UglyQua', "Acme-Regular", sans-serif;  ;
 $Police: 'Acme-Regular';
+
+h1 {
+  font-family: $Police;
+  font-size: 36px;
+}
 
 p {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
 }
 
+#village1 p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+}
+
 html, body, #bloc_page { 
     margin:0;
     height: 100%;
 }
+
 body {
     background: url(Ressources/Fond.jpeg);
     background-size: cover;
@@ -30,10 +42,62 @@ body {
   width: auto;
   padding:5px;
   border-radius: 1em;
-  background-color: #7e8d37;
+  background-color:$Sitecolor;
   cursor: pointer;
   font-size: 2rem;
   font-family: $Police;
+}
+
+.btnPerso2 {
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  padding:5px;
+  border-radius: 1em;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: $Police;
+}
+
+.btnPerso3 {
+  height: 1.5rem;
+  padding: 10px;
+  width: auto;
+  border-radius: 2em;
+  background-color: $Sitecolor2;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  margin: 0 20px 0 20px;
+  transform: scale(1);
+  transition: transform 200ms;
+  &:hover {
+    transform: scale(1.02) 
+  }
+}
+
+.btnPerso3 p {
+  font-family: $Police;
+  margin-top: 2px;
+}
+
+.btnPerso4 {
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  padding:5px;
+  border-radius: 0.5em;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: $Police;
+  transition: transform 200ms;
+  &:hover {
+    transform: border 2px; 
+}
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -87,19 +151,21 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .active {
-  color: $Sitecolor;
-}
-
-#main {
-  margin-top: 150px;
+  color: $Sitecolor2;
+  border-bottom: 3px solid $Sitecolor2;
 }
 
 /* ------------------------- Accueil ------------------------------------- */
 #MenuAccueil {
-margin-top: 50px;
+margin-top: 130px;
 display: flex;
 justify-content: space-around;
-align-items: center;
+
+}
+
+#AccueilPart2 {
+  display: flex;
+  flex-direction: column;
 }
 
 #carrouselAccueil {
@@ -122,11 +188,8 @@ align-items: center;
 
 #meteo {
   background-color: rgba(255, 255, 255, 0.733);
-  height:300px;
+  height:200px;
   width:300px;
-  border-radius: 15px;
-  margin-right: 20px;
-  //padding-top: 15px;
 }
 
 #logoMeteo {
@@ -140,7 +203,17 @@ align-items: center;
   align-items: center;
 }
 
+#calendrier {
+  background-color: rgba(255, 255, 255, 0.733);
+  height:200px;
+  width:300px;
+}
+
 /* -------------------------------- Le Village ---------------------------- */
+#VILLAGE {
+  margin-top: 150px;
+}
+
 #village1 {
   width: 800px;
   margin: auto;
@@ -224,10 +297,15 @@ margin:0 100px 0 100px;
 /* ----------------------------------- Demarches ---------------------------- */
 #DEMARCHES {
   background-color: rgb(255, 255, 255);
+  margin-top: 0px;
   //border: solid 1 px $Sitecolor;
   //border-radius: 15px;
   padding: 10px;
   //margin-top: 15px;
+}
+
+#etatcivil, #autreDem {
+  display: flex;
 }
 
 .choixDemarche, .choixActe {
@@ -238,7 +316,12 @@ margin:0 100px 0 100px;
   margin-bottom: -10px;
 }
 
-#choixDemarche, #menuEtatCivil, .menuDemarches {
+#choixDemarche {
+  display: flex;
+  justify-content: center;
+}
+
+#menuEtatCivil, .menuDemarches {
   display: flex;
   margin-top: 20px;
   justify-content: space-around;
@@ -351,15 +434,17 @@ margin:0 100px 0 100px;
   }
 }
 /* ------------------------------------ Contact ----------------------------*/
+#CONTACT {
+  margin-top: 75px;
+}
 
 #formulaireContact {
+    padding: 20px;
     background-color: rgba(255, 255, 255, 0.5);
     width: 500px;
     margin: auto;
     font-family: $Police;
     font-size: 30px;
-    //text-align: center;
-    border-radius: 1em;
   }
 
 input, textarea {
@@ -374,17 +459,15 @@ input, textarea {
   }
 
 .nomContact input {
-    width: 200px;
+    width: 180px;
     height: 30px;
-    border-radius: 1em;
     border: 0px;
     margin: 20px 0 20px 0;
   }
 
 #messageContact textarea {
-    width: 450px;
+    width: 495px;
     height: 150px;
-    border-radius: 1em;
     border: 0px;
     margin-top: 20px;
   }
