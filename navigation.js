@@ -21,8 +21,8 @@ if ($currentMenu == '') {
 
 $btn.click(function(){
 
-  $btn.removeClass('active');
-  $(this).addClass('active');
+  $btn.removeClass('btnactive');
+  $(this).addClass('btnactive');
   $currentMenu = ('php/' + this.id + ".php");
   $("#main").hide().load($currentMenu).fadeIn('500');
 });
