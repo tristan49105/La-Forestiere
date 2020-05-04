@@ -85,7 +85,7 @@ $('.btnPerso3').click(function() {
 
 
     if (($('#menuEtatCivil').hasClass('closed')) == true) {
-        $('.menuDem').addClass('closed');
+        $('.menuDemarches').addClass('closed');
         $('.choixActe').removeClass('active');
     }
 
