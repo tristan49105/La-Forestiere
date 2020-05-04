@@ -122,12 +122,25 @@ a:link, a:visited, a:hover, a:active {
   .btn:hover {
     transform: scale(1.1); }
 
+.btnDem {
+  cursor: pointer;
+  font-family: "Acme-Regular";
+  font-size: 30px;
+  color: black;
+  transform: scale(1);
+  transition: transform 200ms; }
+  .btnDem:hover {
+    transform: scale(1.1); }
+
 #Contact {
   margin-left: 200px; }
 
-.active {
+.btnactive {
   color: #1e7a21;
   border-bottom: 3px solid #1e7a21; }
+
+.active {
+  color: #1e7a21; }
 
 /* ------------------------- Accueil ------------------------------------- */
 #MenuAccueil {
@@ -274,36 +287,6 @@ a:link, a:visited, a:hover, a:active {
 #menuEtatCivil.closed, .menuDemarches.closed, #menuAutreDemarche.closed {
   display: none; }
 
-#EtatCivil {
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  background: url(Ressources/LogoActe1.png) 0 0 no-repeat; }
-  #EtatCivil:hover {
-    background-position: -50px 0px; }
-  #EtatCivil:hover + h3 {
-    color: #777445; }
-
-#EtatCivil.active {
-  background-position: -50px 0px; }
-  #EtatCivil.active + h3 {
-    color: #777445; }
-
-#autreDemarche {
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  background: url(Ressources/logoActeOther.png) 0 0 no-repeat; }
-  #autreDemarche:hover {
-    background-position: -50px 0px; }
-  #autreDemarche:hover + h3 {
-    color: #777445; }
-
-#autreDemarche.active {
-  background-position: -50px 0px; }
-  #autreDemarche.active + h3 {
-    color: #777445; }
-
 #Naissance {
   display: inline-block;
   height: 100px;
@@ -348,6 +331,13 @@ a:link, a:visited, a:hover, a:active {
   background-position: -100px 0px; }
   #Mariage.active + h3 {
     color: #777445; }
+
+#menuMariage {
+  width: 250px;
+  margin: auto; }
+
+#menuMariage .btnPerso3 {
+  margin: 20px 0 20px 0; }
 
 /* ------------------------------------ Contact ----------------------------*/
 #CONTACT {

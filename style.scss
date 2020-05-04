@@ -146,13 +146,29 @@ a:link, a:visited, a:hover, a:active {
     }
     }
 
+.btnDem {
+  cursor: pointer;
+  font-family: $Police;
+  font-size: 30px;
+  color: black;
+  transform: scale(1);
+  transition: transform 200ms;
+    &:hover {
+    transform: scale(1.1) 
+  }
+}
+
 #Contact {
   margin-left: 200px;
 }
 
-.active {
+.btnactive {
   color: $Sitecolor2;
   border-bottom: 3px solid $Sitecolor2;
+}
+
+.active {
+  color: $Sitecolor2;
 }
 
 /* ------------------------- Accueil ------------------------------------- */
@@ -334,46 +350,6 @@ margin:0 100px 0 100px;
   display: none;
 }
 
-#EtatCivil {
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  background: url(Ressources/LogoActe1.png) 0 0 no-repeat;
-  &:hover {
-    background-position: -50px 0px;
-    }
-  &:hover + h3 {
-        color : $Sitecolor;
-      }
-}
-
-#EtatCivil.active {
-  background-position: -50px 0px;
-  + h3 {
-    color : $Sitecolor;
-  }
-}
-
-#autreDemarche {
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  background: url(Ressources/logoActeOther.png) 0 0 no-repeat;
-  &:hover {
-    background-position: -50px 0px;
-    }
-  &:hover + h3 {
-        color : $Sitecolor;
-      }
-}
-
-#autreDemarche.active {
-  background-position: -50px 0px;
-  + h3 {
-    color : $Sitecolor;
-  }
-}
-
 #Naissance {
   display: inline-block;
   height: 100px;
@@ -432,6 +408,15 @@ margin:0 100px 0 100px;
   + h3 {
   color : $Sitecolor;
   }
+}
+
+#menuMariage {
+  width: 250px;
+  margin: auto;
+}
+
+#menuMariage .btnPerso3 {
+  margin: 20px 0 20px 0;
 }
 /* ------------------------------------ Contact ----------------------------*/
 #CONTACT {

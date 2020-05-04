@@ -45,7 +45,7 @@
             <option value="enfants">Son fils ou sa fille</option>
         </select>
 
-        <div class="btnPerso">Continuer</div>
+        <div class="btnPerso3"><p>Continuer</p></div>
     
     </div>
 
@@ -64,28 +64,28 @@
 // Si le menu est déselectionné, on referme tous les menus suivants dans le formulaire
 
 
-$('.choixDemarche').click(function() {
+$('.btnPerso3').click(function() {
 
-    if ($(this)[0].id == "autreDemarche") {
+    if ($(this)[0].id == "autreDem") {
         $('#menuAutreDemarche').toggleClass("closed");
-        $('#autreDemarche').toggleClass("active");
+        //$('#autreDem').toggleClass("active");
 
         $('#menuEtatCivil').addClass("closed");
-        $('#EtatCivil').removeClass("active");
+        //$('#etatcivil').removeClass("active");
     }
 
 
-    if ($(this)[0].id == "EtatCivil") {
+    if ($(this)[0].id == "etatcivil") {
         $('#menuEtatCivil').toggleClass("closed");
-        $('#EtatCivil').toggleClass("active");
+        //$('#etatcivil').toggleClass("active");
 
         $('#menuAutreDemarche').addClass("closed");
-        $('#autreDemarche').removeClass("active");
+        //$('#autreDem').removeClass("active");
     }
 
 
     if (($('#menuEtatCivil').hasClass('closed')) == true) {
-        $('.menuDemarches').addClass('closed');
+        $('.menuDem').addClass('closed');
         $('.choixActe').removeClass('active');
     }
 
