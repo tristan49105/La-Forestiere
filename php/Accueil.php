@@ -60,7 +60,7 @@ let $weather, $temperature, $legende = $('#legende'), request =
 
     $.ajax ({
 
-        url : "api.openweathermap.org/data/2.5/weather?id=3019549&appid=23109f10e7cc3047a12724ca781c863b&units=metric",
+        url : "https://api.openweathermap.org/data/2.5/weather?id=3019549&appid=23109f10e7cc3047a12724ca781c863b&units=metric",
         dataType : "json"
         //clé openweathermap du tuto = c21a75b667d6f7abb81f118dcf8d4611
     });
