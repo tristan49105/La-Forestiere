@@ -6,6 +6,9 @@ $btn = $('.btn'),
 $currentMenu = '';
 $main = $('#main');
 
+$Demarches = $('#DEMARCHES') ;
+$position = "0"; 
+
 //Par défaut, l'accueil s'affiche
 
 if ($currentMenu == '') {
@@ -25,7 +28,54 @@ $btn.click(function(){
   $(this).addClass('btnactive');
   $currentMenu = ('php/' + this.id + ".php");
   $("#main").hide().load($currentMenu).fadeIn('500');
+
+if ($position == "1") {
+
+   $Demarches.animate ({
+      opacity: 0,
+      top: "-=300"
+   }, 350, function() {
+      $position = "0";
+      console.log($position);
+   });
+
+}
+
 });
+
+
+
+//Choix DEMARCHES 
+
+
+
+$('.btnDemarche').click(function() {
+
+if ($position == "0") {
+
+   $Demarches.animate ({
+   opacity: 1,
+   top: "+=300"
+   }, 350, function() {
+      $position = "1";
+      console.log($position);
+   });
+
+}
+
+ else if ($position == "1") {
+
+   $Demarches.animate ({
+      opacity: 0,
+      top: "-=300"
+   }, 350, function() {
+      $position = "0";
+      console.log($position);
+   });
+
+}
+
+   });
 
 // ========================= Carrousel Accueil =============================
 

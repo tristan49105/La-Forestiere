@@ -89,6 +89,7 @@ a:link, a:visited, a:hover, a:active {
 
 /* ----------------------------------- Bandeau ---------------------------------------------- */
 #bandeau {
+  z-index: 3;
   background-color: white;
   height: 50px;
   padding-top: 25px;
@@ -96,40 +97,26 @@ a:link, a:visited, a:hover, a:active {
 
 #logo {
   position: absolute;
-  margin-left: 70px; }
-  @media screen and (max-width: 1000px) {
-    #logo {
-      margin-left: 0em;
-      margin-top: -230px; } }
-  @media screen and (max-height: 500px) {
-    #logo {
-      display: none; } }
+  margin-left: 70px;
+  z-index: 4; }
 
 #navigation ul {
   list-style: none;
   margin-left: 200px;
   margin-top: 10px;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  z-index: 3; }
 
-.btn {
+.btn, .btnDemarche {
   cursor: pointer;
+  z-index: 3;
   font-family: "Acme-Regular";
   font-size: 30px;
   color: black;
   transform: scale(1);
   transition: transform 200ms; }
-  .btn:hover {
-    transform: scale(1.1); }
-
-.btnDem {
-  cursor: pointer;
-  font-family: "Acme-Regular";
-  font-size: 30px;
-  color: black;
-  transform: scale(1);
-  transition: transform 200ms; }
-  .btnDem:hover {
+  .btn:hover, .btnDemarche:hover {
     transform: scale(1.1); }
 
 #Contact {
@@ -137,10 +124,12 @@ a:link, a:visited, a:hover, a:active {
 
 .btnactive {
   color: #1e7a21;
-  border-bottom: 3px solid #1e7a21; }
+  border-bottom: 3px solid #1e7a21;
+  z-index: 3; }
 
 .active {
-  color: #1e7a21; }
+  color: #1e7a21;
+  z-index: 3; }
 
 /* ------------------------- Accueil ------------------------------------- */
 #MenuAccueil {
@@ -260,8 +249,13 @@ a:link, a:visited, a:hover, a:active {
 
 /* ----------------------------------- Demarches ---------------------------- */
 #DEMARCHES {
+  z-index: 1;
+  opacity: 1;
+  position: relative;
+  top: -300px;
   background-color: white;
   margin-top: 0px;
+  margin-bottom: -150px;
   padding: 10px; }
 
 #etatcivil, #autreDem {
@@ -284,7 +278,7 @@ a:link, a:visited, a:hover, a:active {
   #menuEtatCivil + h2, .menuDemarches + h2 {
     display: inline-block; }
 
-#menuEtatCivil.closed, .menuDemarches.closed, #menuAutreDemarche.closed {
+#menuEtatCivil.closed, .menuDemarches.closed, #menuAutreDemarche.closed, .menuDemarches1.closed {
   display: none; }
 
 #Naissance {
