@@ -58,7 +58,6 @@ if ($position == "0") {
    top: "+=300"
    }, 350, function() {
       $position = "1";
-      console.log($position);
    });
 
 }
@@ -70,12 +69,39 @@ if ($position == "0") {
       top: "-=300"
    }, 350, function() {
       $position = "0";
-      console.log($position);
    });
 
 }
 
    });
+
+
+   $('.btnChoixDemarche').click(function() {
+
+         $currentMenu = ('php/' + this.id + ".php");
+         $("#main").hide().load($currentMenu).fadeIn('500');
+
+         $Demarches.animate ({
+            opacity: 0,
+            top: "-=300"
+         }, 450, function() {
+            $position = "0";
+         });
+   
+  
+  });
+  
+  // En choisissant un acte, on ouvre son menu et on active son icone. 
+  // Si on change d'acte, on réinitialise les autres choix
+  
+  $('.choixActe').click(function() {
+  
+      $('.choixActe').removeClass('active');
+      $(this).addClass('active');
+      $('.menuDemarches').addClass('closed');
+      $('#menu'+$(this)[0].id).toggleClass('closed');
+  
+  });
 
 // ========================= Carrousel Accueil =============================
 

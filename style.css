@@ -49,7 +49,7 @@ body {
   font-size: 2rem;
   font-family: "Acme-Regular"; }
 
-.btnPerso3 {
+.btnPerso3, .btnChoixDemarche {
   height: 1.5rem;
   padding: 10px;
   width: auto;
@@ -61,10 +61,10 @@ body {
   margin: 0 20px 0 20px;
   transform: scale(1);
   transition: transform 200ms; }
-  .btnPerso3:hover {
+  .btnPerso3:hover, .btnChoixDemarche:hover {
     transform: scale(1.02); }
 
-.btnPerso3 p {
+.btnPerso3 p, .btnChoixDemarche p {
   font-family: "Acme-Regular";
   margin-top: 2px; }
 
@@ -110,7 +110,6 @@ a:link, a:visited, a:hover, a:active {
 
 .btn, .btnDemarche {
   cursor: pointer;
-  z-index: 3;
   font-family: "Acme-Regular";
   font-size: 30px;
   color: black;
@@ -258,7 +257,7 @@ a:link, a:visited, a:hover, a:active {
   margin-bottom: -150px;
   padding: 10px; }
 
-#etatcivil, #autreDem {
+#etatcivil, #servicePublic {
   display: flex; }
 
 .choixDemarche, .choixActe {
@@ -271,66 +270,32 @@ a:link, a:visited, a:hover, a:active {
   display: flex;
   justify-content: center; }
 
-#menuEtatCivil, .menuDemarches {
+#menuServicePublic {
   display: flex;
-  margin-top: 20px;
+  background-color: white;
+  margin-top: 100px;
   justify-content: space-around; }
-  #menuEtatCivil + h2, .menuDemarches + h2 {
+  #menuServicePublic + h2 {
     display: inline-block; }
 
-#menuEtatCivil.closed, .menuDemarches.closed, #menuAutreDemarche.closed, .menuDemarches1.closed {
+#menuEtatCivil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 100px; }
+
+.closed {
   display: none; }
 
-#Naissance {
+.line {
+  display: inline-block; }
+
+#btnFormulaire {
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  background: url(Ressources/logoNaissance1.png) 0 0 no-repeat; }
-  #Naissance:hover {
-    background-position: -100px 0px; }
-  #Naissance:hover + h3 {
-    color: #777445; }
-
-#Naissance.active {
-  background-position: -100px 0px; }
-  #Naissance.active + h3 {
-    color: #777445; }
-
-#Deces {
-  display: inline-block;
-  height: 100px;
-  width: 100px;
-  background: url(Ressources/logoDeces2.png) 0 0 no-repeat; }
-  #Deces:hover {
-    background-position: -100px 0px; }
-  #Deces:hover + h3 {
-    color: #777445; }
-
-#Deces.active {
-  background-position: -100px 0px; }
-  #Deces.active + h3 {
-    color: #777445; }
-
-#Mariage {
-  display: inline-block;
-  height: 100px;
-  width: 100px;
-  background: url(Ressources/logoMariage2.png) 0 0 no-repeat; }
-  #Mariage:hover {
-    background-position: -100px 0px; }
-  #Mariage:hover + h3 {
-    color: #777445; }
-
-#Mariage.active {
-  background-position: -100px 0px; }
-  #Mariage.active + h3 {
-    color: #777445; }
-
-#menuMariage {
-  width: 250px;
-  margin: auto; }
-
-#menuMariage .btnPerso3 {
+  width: 75px;
+  height: 20px;
   margin: 20px 0 20px 0; }
 
 /* ------------------------------------ Contact ----------------------------*/
@@ -345,7 +310,7 @@ a:link, a:visited, a:hover, a:active {
   font-family: "Acme-Regular";
   font-size: 30px; }
 
-input, textarea {
+#CONTACT input, #CONTACT textarea {
   font-family: "Acme-Regular";
   font-size: 25px; }
 
