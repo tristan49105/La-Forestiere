@@ -26,6 +26,8 @@ if ($currentMenu == '') {
 
 $btn.click(function(){
 
+if (this.id == "Accueil" || this.id == "Village" || this.id == "Contact") {
+
   $btn.removeClass('btnactive');
   $('.btnDemarche').removeClass('btnactive');
   $(this).addClass('btnactive');
@@ -44,42 +46,104 @@ if ($positionDemarches == "1") {
 
 }
 
-});
-
-
-
-//Choix DEMARCHES 
-
-$('.btnDemarche').click(function() {
-
-if ($positionDemarches == "0") {
+if ($positionMairie == "1") {
    
-   $Demarches.removeClass("closed");
-   $Demarches.animate ({
-   opacity: 1,
-   top: "+=300"
-   }, 350, function() {
-      $positionDemarches = "1";
-   });
-
-}
-
- else if ($positionDemarches == "1") {
-
-   $Demarches.animate ({
+   $Mairie.animate ({
       opacity: 0,
       top: "-=300"
    }, 350, function() {
-      $positionDemarches = "0";
-      $Demarches.addClass("closed");
+      $positionMairie = "0";
+      $Mairie.addClass("closed");
    });
 
 }
 
+}
+
+if (this.id == "Demarches") {
+
+   if ($positionMairie == "1") {
+   
+      $Mairie.animate ({
+         opacity: 0,
+         top: "-=300"
+      }, 200, function() {
+         $positionMairie = "0";
+         $Mairie.addClass("closed");
+      });
+   
+   }
+   
+   if ($positionDemarches == "0") {
+   
+      $Demarches.removeClass("closed");
+      $Demarches.animate ({
+      opacity: 1,
+      top: "+=300"
+      }, 350, function() {
+         $positionDemarches = "1";
+      });
+   
+   }
+   
+    else if ($positionDemarches == "1") {
+   
+      $Demarches.animate ({
+         opacity: 0,
+         top: "-=300"
+      }, 350, function() {
+         $positionDemarches = "0";
+         $Demarches.addClass("closed");
+      });
+   
+   }
+}
+
+if (this.id == "Mairie") {
+
+   if ($positionDemarches == "1") {
+
+      $Demarches.animate ({
+         opacity: 0,
+         top: "-=300"
+      }, 350, function() {
+         $positionDemarches = "0";
+         console.log($positionDemarches);
+      });
+   
+   }
+
+if ($positionMairie == "0") {
+
+   $Mairie.removeClass("closed");
+
+   $Mairie.animate ({
+   opacity: 1,
+   top: "+=300"
+   }, 350, function() {
+      $positionMairie = "1";
    });
 
+}
 
-   $('.btnChoixDemarche').click(function() {
+ else if ($positionMairie == "1") {
+
+   $Mairie.animate ({
+      opacity: 0,
+      top: "-=300"
+   }, 350, function() {
+      $positionMairie = "0";
+      $Mairie.addClass("closed");
+   });
+
+}
+
+}
+
+});
+
+
+$('.btnChoixDemarche').click(function() {
 
          $currentMenu = ('php/' + this.id + ".php");
          $("#main").hide().load($currentMenu).fadeIn('500');
@@ -97,9 +161,6 @@ if ($positionDemarches == "0") {
   
   });
   
-  // En choisissant un acte, on ouvre son menu et on active son icone. 
-  // Si on change d'acte, on réinitialise les autres choix
-  
   $('.choixActe').click(function() {
   
       $('.choixActe').removeClass('active');
@@ -108,39 +169,6 @@ if ($positionDemarches == "0") {
       $('#menu'+$(this)[0].id).toggleClass('closed');
   
   });
-
-// Choix MAIRIE
-
-$('.btnMairie').click(function() {
-
-   if ($positionMairie == "0") {
-      
-
-      $Mairie.removeClass("closed");
-
-      $Mairie.animate ({
-      opacity: 1,
-      top: "+=300"
-      }, 350, function() {
-         $positionMairie = "1";
-      });
-   
-   }
-   
-    else if ($positionMairie == "1") {
-   
-      $Mairie.animate ({
-         opacity: 0,
-         top: "-=300"
-      }, 350, function() {
-         $positionMairie = "0";
-         $Mairie.addClass("closed");
-      });
-   
-   }
-   
-      });
-
 
 
 // ========================= Carrousel Accueil =============================
@@ -178,4 +206,3 @@ function carrouselAccueil () {
     
 
 });
-
