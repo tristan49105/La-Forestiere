@@ -49,7 +49,7 @@ body {
   font-size: 2rem;
   font-family: "Acme-Regular"; }
 
-.btnPerso3, .btnChoixDemarche {
+.btnPerso3, .btnChoixDemarche, .btnChoixMairie {
   height: 1.5rem;
   padding: 10px;
   width: auto;
@@ -61,10 +61,10 @@ body {
   margin: 0 20px 0 20px;
   transform: scale(1);
   transition: transform 200ms; }
-  .btnPerso3:hover, .btnChoixDemarche:hover {
+  .btnPerso3:hover, .btnChoixDemarche:hover, .btnChoixMairie:hover {
     transform: scale(1.02); }
 
-.btnPerso3 p, .btnChoixDemarche p {
+.btnPerso3 p, .btnChoixDemarche p, .btnChoixMairie p {
   font-family: "Acme-Regular";
   margin-top: 2px; }
 
@@ -108,14 +108,14 @@ a:link, a:visited, a:hover, a:active {
   justify-content: space-around;
   z-index: 3; }
 
-.btn, .btnDemarche {
+.btn, .btnDemarche, .btnMairie {
   cursor: pointer;
   font-family: "Acme-Regular";
   font-size: 30px;
   color: black;
   transform: scale(1);
   transition: transform 200ms; }
-  .btn:hover, .btnDemarche:hover {
+  .btn:hover, .btnDemarche:hover, .btnMairie:hover {
     transform: scale(1.1); }
 
 #Contact {
@@ -246,6 +246,17 @@ a:link, a:visited, a:hover, a:active {
 #carrouselCP li {
   float: left; }
 
+/* --------------------------------- MAIRIE ------------------------------ */
+#MAIRIE {
+  z-index: 0;
+  opacity: 1;
+  position: relative;
+  top: -300px;
+  background-color: white;
+  margin-top: 0px;
+  margin-bottom: -150px;
+  padding: 10px; }
+
 /* ----------------------------------- Demarches ---------------------------- */
 #DEMARCHES {
   z-index: 1;
@@ -266,7 +277,7 @@ a:link, a:visited, a:hover, a:active {
   cursor: pointer;
   margin-bottom: -10px; }
 
-#choixDemarche {
+#choixDemarche, #choixMairie {
   display: flex;
   justify-content: center; }
 
@@ -288,9 +299,6 @@ a:link, a:visited, a:hover, a:active {
 
 .closed {
   display: none; }
-
-.line {
-  display: inline-block; }
 
 #btnFormulaire {
   display: inline-block;

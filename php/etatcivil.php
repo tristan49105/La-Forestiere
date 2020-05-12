@@ -1,6 +1,6 @@
 <div id="menuEtatCivil">
 
-    <div id="formulaire1">
+    <div id="formulaire1" class="menuFormulaire">
 
         <h2>Quelle est la nature de l'acte souhaité ?</h2>
 
@@ -12,7 +12,7 @@
 
     </div>
 
-    <div id="formualaire2" class=closed>
+    <div id="formualaire2" class="menuFormulaire closed" >
 
         <h2>Désignation de l'acte demandé</h2>
 
@@ -32,17 +32,12 @@
 
     
 
-    <div id="formualaire3" class=closed>
+    <div id="formualaire3" class="menuFormulaire closed">
 
         <h2>Votre identité</h2>
 
-        <label class="radio-inline">
-            <input type="radio" name="CiviliteDemandeur" checked>Monsieur
-        </label>
-        
-        <label class="radio-inline">
-            <input type="radio" name="CiviliteDemandeur" checked>Madame</br></br>
-        </label>
+        <input type="radio" name="civiliteDemandeur" value="monsieur" id="monsieur" /> <label for="monsieur">Monsieur</label>
+        <input type="radio" name="civiliteDemandeur" value="madame" id="madame" /> <label for="madame">Madame</label><br /><br />
 
         <input type="text" id="nameDemandeur" name="nameDemandeur" placeholder="Votre nom" required>
         <input type="text" id="prenomDemandeur" name="prenomDemandeur" placeholder="Votre prénom" required></br></br>
@@ -50,7 +45,7 @@
     </div>
 
 
-    <div id="formualaire4" class=closed>
+    <div id="formualaire4" class="menuFormulaire closed">
 
         <h2>Identité de la personne faisant l’objet de la demande</h2>
 
@@ -72,11 +67,24 @@
 </div>
 
 <script>
-    var i = 1;
+
+    $menuformulaire = $('.menuFormulaire').length
+
+    var i = 2;
 
     $('#btnFormulaire').click(function() {
-    i++;
+    
+    if (i <= ($menuformulaire)) {
     $("#formualaire" + i).removeClass('closed');
+    i++;   
+    }
+
+
+    else {
+
+        alert('envoi');
+        
+    }
 
   });
 

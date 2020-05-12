@@ -7,7 +7,9 @@ $currentMenu = '';
 $main = $('#main');
 
 $Demarches = $('#DEMARCHES') ;
-$position = "0"; 
+$Mairie = $('#MAIRIE');
+$positionDemarches = "0";
+$positionMairie = "0"; 
 
 //Par défaut, l'accueil s'affiche
 
@@ -25,18 +27,19 @@ if ($currentMenu == '') {
 $btn.click(function(){
 
   $btn.removeClass('btnactive');
+  $('.btnDemarche').removeClass('btnactive');
   $(this).addClass('btnactive');
   $currentMenu = ('php/' + this.id + ".php");
   $("#main").hide().load($currentMenu).fadeIn('500');
 
-if ($position == "1") {
+if ($positionDemarches == "1") {
 
    $Demarches.animate ({
       opacity: 0,
       top: "-=300"
    }, 350, function() {
-      $position = "0";
-      console.log($position);
+      $positionDemarches = "0";
+      console.log($positionDemarches);
    });
 
 }
@@ -47,28 +50,28 @@ if ($position == "1") {
 
 //Choix DEMARCHES 
 
-
-
 $('.btnDemarche').click(function() {
 
-if ($position == "0") {
-
+if ($positionDemarches == "0") {
+   
+   $Demarches.removeClass("closed");
    $Demarches.animate ({
    opacity: 1,
    top: "+=300"
    }, 350, function() {
-      $position = "1";
+      $positionDemarches = "1";
    });
 
 }
 
- else if ($position == "1") {
+ else if ($positionDemarches == "1") {
 
    $Demarches.animate ({
       opacity: 0,
       top: "-=300"
    }, 350, function() {
-      $position = "0";
+      $positionDemarches = "0";
+      $Demarches.addClass("closed");
    });
 
 }
@@ -80,12 +83,15 @@ if ($position == "0") {
 
          $currentMenu = ('php/' + this.id + ".php");
          $("#main").hide().load($currentMenu).fadeIn('500');
+         $btn.removeClass('btnactive');
+         $('.btnDemarche').addClass('btnactive');
+
 
          $Demarches.animate ({
             opacity: 0,
             top: "-=300"
          }, 450, function() {
-            $position = "0";
+            $positionDemarches = "0";
          });
    
   
@@ -102,6 +108,40 @@ if ($position == "0") {
       $('#menu'+$(this)[0].id).toggleClass('closed');
   
   });
+
+// Choix MAIRIE
+
+$('.btnMairie').click(function() {
+
+   if ($positionMairie == "0") {
+      
+
+      $Mairie.removeClass("closed");
+
+      $Mairie.animate ({
+      opacity: 1,
+      top: "+=300"
+      }, 350, function() {
+         $positionMairie = "1";
+      });
+   
+   }
+   
+    else if ($positionMairie == "1") {
+   
+      $Mairie.animate ({
+         opacity: 0,
+         top: "-=300"
+      }, 350, function() {
+         $positionMairie = "0";
+         $Mairie.addClass("closed");
+      });
+   
+   }
+   
+      });
+
+
 
 // ========================= Carrousel Accueil =============================
 
