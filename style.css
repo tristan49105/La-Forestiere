@@ -3,20 +3,27 @@
 h1 {
   font-family: "Acme-Regular";
   font-size: 36px; }
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 18px; } }
 
 p {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px; }
 
-#village1 p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 24px; }
-
 html, body, #bloc_page {
   margin: 0;
   height: 100%; }
+  @media only screen and (max-width: 550px) {
+    html, body, #bloc_page {
+      width: auto;
+      margin: auto; } }
+  @media only screen and (max-width: 320px) {
+    html, body, #bloc_page {
+      width: 320px;
+      margin: auto; } }
 
-body {
+#bloc_page {
   background: url(Ressources/Fond.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,6 +31,14 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column; }
+  @media only screen and (min-width: 1400px) {
+    #bloc_page {
+      width: 1400px;
+      margin: auto; } }
+  @media only screen and (max-width: 550px) {
+    #bloc_page {
+      width: auto;
+      margin: auto; } }
 
 .btnPerso {
   margin: 10px 0 20px 0;
@@ -36,6 +51,9 @@ body {
   cursor: pointer;
   font-size: 2rem;
   font-family: "Acme-Regular"; }
+  @media only screen and (max-width: 600px) {
+    .btnPerso {
+      font-size: 1rem; } }
 
 .btnPerso2 {
   margin: 10px 0 20px 0;
@@ -48,6 +66,9 @@ body {
   cursor: pointer;
   font-size: 2rem;
   font-family: "Acme-Regular"; }
+  @media only screen and (max-width: 600px) {
+    .btnPerso2 {
+      font-size: 1rem; } }
 
 .btnPerso3, .btnChoixDemarche, .btnChoixMairie {
   height: 1.5rem;
@@ -56,7 +77,6 @@ body {
   border-radius: 2em;
   background-color: #1e7a21;
   cursor: pointer;
-  font-size: 1rem;
   color: white;
   margin: 0 20px 0 20px;
   transform: scale(1);
@@ -99,6 +119,33 @@ a:link, a:visited, a:hover, a:active {
   position: absolute;
   margin-left: 70px;
   z-index: 4; }
+  @media only screen and (max-width: 800px) {
+    #logo {
+      margin-left: 15px; } }
+  @media only screen and (max-width: 850px) {
+    #logo {
+      margin-left: 5px; } }
+
+#logo.hide {
+  display: none; }
+
+#logoMenu {
+  z-index: 3;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  cursor: pointer;
+  background-image: url(Ressources/menu1.png); }
+  #logoMenu:hover {
+    background-position: -35px 0px; }
+  @media only screen and (min-width: 768px) {
+    #logoMenu {
+      display: none; } }
+  @media only screen and (max-width: 320px) {
+    #logoMenu {
+      right: 0px; } }
 
 #navigation ul {
   list-style: none;
@@ -107,24 +154,57 @@ a:link, a:visited, a:hover, a:active {
   display: flex;
   justify-content: space-around;
   z-index: 3; }
+  @media only screen and (max-width: 767px) {
+    #navigation ul {
+      display: none; } }
 
-.btn, .btnDemarche, .btnMairie {
+#navigationMobile {
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  top: -300px; }
+
+#navigationMobile ul {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  list-style: none; }
+  @media only screen and (min-width: 768px) {
+    #navigationMobile ul {
+      display: none; } }
+
+.btn {
   cursor: pointer;
+  z-index: 3;
   font-family: "Acme-Regular";
   font-size: 30px;
   color: black;
   transform: scale(1);
   transition: transform 200ms; }
-  .btn:hover, .btnDemarche:hover, .btnMairie:hover {
+  .btn:hover {
     transform: scale(1.1); }
+  @media only screen and (max-width: 1200px) {
+    .btn {
+      font-size: 25px; } }
 
 #Contact {
   margin-left: 200px; }
+  @media only screen and (max-width: 1000px) {
+    #Contact {
+      margin-left: 0px; } }
+  @media only screen and (max-width: 768px) {
+    #Contact {
+      margin-left: 0px; } }
 
 .btnactive {
   color: #1e7a21;
   border-bottom: 3px solid #1e7a21;
   z-index: 3; }
+  @media only screen and (max-width: 768px) {
+    .btnactive {
+      color: #1e7a21;
+      border-bottom: none; } }
 
 .active {
   color: #1e7a21;
@@ -135,26 +215,20 @@ a:link, a:visited, a:hover, a:active {
   margin-top: 130px;
   display: flex;
   justify-content: space-around; }
+  @media only screen and (max-width: 610px) {
+    #MenuAccueil {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      margin-top: 100px; } }
 
 #AccueilPart2 {
   display: flex;
   flex-direction: column; }
-
-#carrouselAccueil {
-  height: 300px;
-  width: 400px;
-  border: 3px solid #F2F2F2;
-  overflow: hidden; }
-
-#carrouselAccueil ul {
-  width: 400%;
-  height: 300px;
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-
-#carrouselAccueil li {
-  float: left; }
+  @media only screen and (max-width: 610px) {
+    #AccueilPart2 {
+      margin-top: 50px; } }
 
 #meteo {
   background-color: rgba(255, 255, 255, 0.733);
@@ -174,6 +248,9 @@ a:link, a:visited, a:hover, a:active {
   background-color: rgba(255, 255, 255, 0.733);
   height: 200px;
   width: 300px; }
+  @media only screen and (max-width: 610px) {
+    #calendrier {
+      margin-top: 25px; } }
 
 /* -------------------------------- Le Village ---------------------------- */
 #VILLAGE {
@@ -183,19 +260,39 @@ a:link, a:visited, a:hover, a:active {
   width: 800px;
   margin: auto;
   margin-bottom: 300px; }
+  @media only screen and (max-width: 800px) {
+    #village1 {
+      width: auto; } }
 
-#village2 {
-  margin: 0 100px 0 100px; }
+#village1 p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px; }
+  @media only screen and (max-width: 600px) {
+    #village1 p {
+      font-size: 18px; } }
+
+@media only screen and (max-width: 1075px) {
+  #village2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -50px; } }
 
 #village3 {
-  margin-bottom: -30px; }
+  margin-bottom: 50px; }
+  @media only screen and (max-width: 1075px) {
+    #village3 {
+      display: flex;
+      flex-direction: column; } }
 
 #village4 {
   margin-bottom: 0px; }
+  @media only screen and (max-width: 1075px) {
+    #village4 {
+      display: flex;
+      flex-direction: column; } }
 
 .legende {
   font-weight: bold;
-  width: 450px;
   margin: auto; }
 
 .menuVillage {
@@ -219,6 +316,10 @@ a:link, a:visited, a:hover, a:active {
   border: 3px solid #F2F2F2;
   overflow: hidden; }
 
+.imgCarrouselVillage {
+  width: 500px;
+  height: 350px; }
+
 #carrouselVillage ul {
   width: 400%;
   height: 350px;
@@ -229,33 +330,32 @@ a:link, a:visited, a:hover, a:active {
 #carrouselVillage li {
   float: left; }
 
-#carrouselCP {
-  margin: auto;
-  width: 700px;
-  height: 450px;
-  overflow: hidden;
-  border: 3px solid #F2F2F2; }
+.menu2Village img {
+  width: 500px;
+  height: 350px; }
+  @media only screen and (max-width: 768px) {
+    .menu2Village img {
+      width: 300px;
+      height: 200px; } }
 
-#carrouselCP ul {
-  width: 700%;
-  height: 450px;
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-
-#carrouselCP li {
-  float: left; }
+#Maps iframe {
+  width: 600px;
+  height: 450px; }
+  @media only screen and (max-width: 768px) {
+    #Maps iframe {
+      width: 300px;
+      height: 200px; } }
 
 /* --------------------------------- MAIRIE ------------------------------ */
 #MAIRIE {
   z-index: 0;
-  opacity: 1;
-  position: relative;
-  top: -300px;
-  background-color: white;
-  margin-top: 0px;
-  margin-bottom: -150px;
-  padding: 10px; }
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -100px;
+  background-color: white; }
 
 /* ----------------------------------- Demarches ---------------------------- */
 #DEMARCHES {
@@ -280,6 +380,14 @@ a:link, a:visited, a:hover, a:active {
 #choixDemarche, #choixMairie {
   display: flex;
   justify-content: center; }
+  @media only screen and (max-width: 768px) {
+    #choixDemarche, #choixMairie {
+      flex-direction: column; } }
+
+.btnChoixMairie, .btnChoixDemarche {
+  width: auto;
+  margin: auto;
+  margin-bottom: 10px; }
 
 #menuServicePublic {
   display: flex;
@@ -308,15 +416,17 @@ a:link, a:visited, a:hover, a:active {
 
 /* ------------------------------------ Contact ----------------------------*/
 #CONTACT {
-  margin-top: 75px; }
+  margin-top: 150px; }
 
 #formulaireContact {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(195, 191, 191, 0.5);
   width: 500px;
   margin: auto;
   font-family: "Acme-Regular";
   font-size: 30px; }
+  @media only screen and (max-width: 600px) {
+    #formulaireContact {
+      width: auto; } }
 
 #CONTACT input, #CONTACT textarea {
   font-family: "Acme-Regular";
@@ -326,6 +436,9 @@ a:link, a:visited, a:hover, a:active {
   display: flex;
   justify-content: space-between;
   text-align: center; }
+  @media only screen and (max-width: 550px) {
+    #CoordonneesContact {
+      flex-direction: column; } }
 
 .nomContact input {
   width: 180px;
@@ -338,6 +451,10 @@ a:link, a:visited, a:hover, a:active {
   height: 150px;
   border: 0px;
   margin-top: 20px; }
+  @media only screen and (max-width: 550px) {
+    #messageContact textarea {
+      width: auto;
+      margin: auto; } }
 
 #ErrorMailContact.closed, #SuccessMailContact.closed {
   display: none; }

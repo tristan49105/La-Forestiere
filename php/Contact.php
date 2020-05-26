@@ -1,4 +1,4 @@
-<div id="CONTACT" div class="menu">
+<div id="CONTACT">
 
    <div id="formulaireContact">
 
@@ -7,12 +7,12 @@
          <div id="CoordonneesContact">
 
             <div class="nomContact">
-               <!-- <label for="name">Votre nom :</label> -->
+            
                <input type="text" id="name" name="name" placeholder="Votre nom" required>
             </div>
 
             <div class="nomContact">
-               <!-- <label for="mail">Votre e-mail :</label> -->
+              
                <input type="email" id="mail" name="mail" placeholder="Votre Email" required>
             </div>
          
@@ -20,7 +20,7 @@
 
          
          <div id="messageContact">
-            <!-- <label for="msg">Votre message :</label> -->
+            
             <textarea id="msg" name="msg" placeholder="Votre message" required></textarea>
          </div>
          
@@ -34,6 +34,7 @@
    </div>
 
 </div>
+
 
 <script>
 
