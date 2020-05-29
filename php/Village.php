@@ -22,6 +22,8 @@
             </ul>
    </div>
 
+   <div id="photoNavMobile"><img src="Ressources/CarrouselAccueil/1.PNG"></div>
+
       <div class="legende">
 
          <p>Petit village typique, vivant au rythme de son église, cernée par la nature et le chant des oiseaux</p>
@@ -32,7 +34,7 @@
 
 <div id=village3 class="menuVillage">
 
-   <div class="legende2">
+   <div class="legende">
 
       <h2>Que faire à La Forestière ?</h2>
       <p>Entre Patrimoine, terroir, randonnées et activités, les coteaux sézannais regorgent d'activités détentes et découvertes</p>
@@ -53,7 +55,7 @@
    </div>
 
 
-   <div class="legende2">
+   <div class="legende">
       <h2>Venir à La Forestière</h2>
       <p>A une heure de Reims et de Troyes, à 25 minutes de Provins et Romilly, La Forestière est déservable par la N4</p>
    </div>
